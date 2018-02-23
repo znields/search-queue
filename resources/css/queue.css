@@ -1,0 +1,18 @@
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+}
+th {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    text-align: left;
+}
+.boxed {
+    border: 1px solid black;
+    background: #ffaea7;
+    width: 200px;
+    text-align: center;
+    font-family: sans-serif;
+    margin: auto;
+}

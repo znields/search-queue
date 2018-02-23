@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Search Queue",
+  "version" : "1.0",
+
+  "options_page": "queue.html",
+  "description" : "Search Queue allows the user to queue up multiple google searches and click through the queue.",
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
