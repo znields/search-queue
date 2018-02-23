@@ -18,6 +18,18 @@ function notify(message) {
     chrome.notifications.create("0" ,options, function () {  });
 }
 
+function start() {
+    chrome.storage.sync.get({
+        beginPhrase: '',
+        xPhrase: '',
+        endPhrase: '',
+        indexPhrase: 1
+    }, function (items) {
+        var term = generateSearch(items.beginPhrase, items.xPhrase, items.endPhrase, items.indexPhrase - 1);
+        chrome.tabs.update({'url': term});
+    });
+}
+
 function next() {
     chrome.storage.sync.get({
         beginPhrase: '',
@@ -61,8 +73,9 @@ function previous() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('edit').addEventListener('click', openQueue);
+    document.getElementById('start').addEventListener('click', start);
     document.getElementById('next').addEventListener('click', next);
     document.getElementById('previous').addEventListener('click', previous);
+    document.getElementById('edit').addEventListener('click', openQueue);
 
 });
