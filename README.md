@@ -8,11 +8,33 @@ Search Queue adds a queue to Google search! This extension allows the user to qu
 
 Search Queue has a few different features, all of which I will attempt to explain in detail here.
 
+### Queue Editor
+
+The queue editor automatically opens after Queue Search has been installed. It can also be accessed by clicking on the Queue Search icon in the toolbar and then 'Edit Queue'. The queue editor's primary purpose is to allow the user to add or remove searches from the queue. The following is a functional description of each of the input fields on the editor page:
+
+#### Constant Phrase
+
+The two 'Constant phrase' input fields allow the user to specify constant search terms that always appear at the beginning or end of each Google search. The constant input field to the left of the search queue is added before the search queue term, while the field to the right is added after.
+
+#### Search Queue
+
+The 'Search queue' input field is where the user enters the terms that are to be successively searched. Each successive search should be entered one after the other seperated by a comma with no extra spaces added. Example: Facebook,Google Plus,Snapchat,Instagram
+
+#### Queue Index
+
+The queue index determines which term will be searched in the search queue. Using the previous example of a search queue of Facebook,Google Plus,Snapchat,Instagram, if the search index is 2, then the term 'Google Plus' will be searched. The queue index must be a value between 1 and the number of items in the search queue.
+
+#### Save
+
+The save button saves the queue that the user has entered. If the queue index is not between 1 and the number of items in the queue, all other changes will be saved, however the new queue index value will be discarded.
+
 ### Extension Popup
 
 The extension popup page can be accessed by clicking the Search Queue icon on the right of the toolbar. On this page, there are few tasks that the user can do:
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/start.png" width="16"> Start
+
+The start button searches Google for the term in the search queue that the queue index pointst
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/next.png" width="16"> Next
 
