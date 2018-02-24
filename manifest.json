@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Search Queue",
-  "version" : "1.1",
+  "version" : "1.3",
 
   "options_page": "queue.html",
   "description" : "Search Queue allows the user to queue up multiple google searches and click through the queue.",
@@ -18,7 +18,7 @@
       "suggested_key": {
         "default": "Ctrl+Shift+Right"
       },
-      "description": "next",
+      "description": "Next",
       "global": true
     },
     "previous": {
