@@ -18,11 +18,11 @@ The two 'Constant phrase' input fields allow the user to specify constant search
 
 #### Search Queue
 
-The 'Search queue' input field is where the user enters the terms that are to be successively searched. Each successive search should be entered one after the other seperated by a comma with no extra spaces added. Example: Facebook,Google Plus,Snapchat,Instagram
+The 'Search queue' input field is where the user enters the terms that are to be successively searched. Each successive search should be entered one after the other seperated by a comma with no extra spaces added. Example: 'Facebook,Google Plus,Snapchat,Instagram'
 
 #### Queue Index
 
-The queue index determines which term will be searched in the search queue. Using the previous example of a search queue of Facebook,Google Plus,Snapchat,Instagram, if the search index is 2, then the term 'Google Plus' will be searched. The queue index must be a value between 1 and the number of items in the search queue.
+The queue index determines which term will be searched in the search queue. Using the previous example of a search queue of 'Facebook,Google Plus,Snapchat,Instagram', if the search index is 2, then the term 'Google Plus' will be searched. The queue index must be a value between 1 and the number of items in the search queue.
 
 #### Save
 
@@ -34,15 +34,23 @@ The extension popup page can be accessed by clicking the Search Queue icon on th
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/start.png" width="16"> Start
 
-The start button searches Google for the term in the search queue that the queue index pointst
+The 'Start' button searches Google for the term in the search queue that the queue index points to.
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/next.png" width="16"> Next
 
+The 'Next' button seraches Google for the next term in the search queue. The 'Next' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Right". 
+
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/previous.png" width="16"> Previous
+
+The 'Previous' button seraches Google for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Left". 
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/edit.png" width="16"> Edit Queue
 
+The 'Edit Queue' button navigates the user to the queue editor page.
+
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/help.png" width="16"> Help
+
+The 'Help' button navigates the user to the Search Queue repository.
 
 ## Use Cases
 
