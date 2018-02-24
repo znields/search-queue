@@ -72,6 +72,17 @@ function previous() {
     });
 }
 
+function command(string) {
+    if (string === 'next') {
+        next();
+    }
+    else if (string === 'previous') {
+        previous();
+    }
+}
+
+chrome.commands.onCommand.addListener(command);
+
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('start').addEventListener('click', start);
     document.getElementById('next').addEventListener('click', next);

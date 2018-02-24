@@ -1,17 +1,37 @@
 {
   "manifest_version": 2,
   "name": "Search Queue",
-  "version" : "1.0",
+  "version" : "1.1",
 
   "options_page": "queue.html",
   "description" : "Search Queue allows the user to queue up multiple google searches and click through the queue.",
+  "background": {
+    "scripts": ["resources/js/popup.js"]
+  },
 
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "resources/images/icon.png"
   },
+  "commands": {
+    "next": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Right"
+      },
+      "description": "next",
+      "global": true
+    },
+    "previous": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+b"
+      },
+      "description": "Previous",
+      "global": true
+    }
+  },
   "permissions": [
     "storage",
-    "notifications"
+    "notifications",
+    "tabs"
   ]
 }
