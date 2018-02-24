@@ -1,10 +1,21 @@
 function save_options() {
-    chrome.storage.sync.set({
-        beginPhrase: document.getElementById('beginprhase').value,
-        xPhrase: document.getElementById('xphrase').value,
-        endPhrase: document.getElementById('endphrase').value,
-        indexPhrase: document.getElementById('indexphrase').value
-    });
+
+    if (document.getElementById('indexphrase').value > document.getElementById('xphrase').value.split(',').length) {
+        chrome.storage.sync.set({
+            beginPhrase: document.getElementById('beginprhase').value,
+            xPhrase: document.getElementById('xphrase').value,
+            endPhrase: document.getElementById('endphrase').value,
+        });
+        alert("Queue index must be less than or equal to the number of searches queued.");
+    }
+    else {
+        chrome.storage.sync.set({
+            beginPhrase: document.getElementById('beginprhase').value,
+            xPhrase: document.getElementById('xphrase').value,
+            endPhrase: document.getElementById('endphrase').value,
+            indexPhrase: document.getElementById('indexphrase').value
+        });
+    }
 }
 
 function restore_options() {

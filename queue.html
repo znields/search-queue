@@ -8,28 +8,24 @@
     <script src="resources/js/queue.js"></script>
 </head>
 <body>
-    <h1><img src="resources/images/icon.png" width="24">&nbsp; Edit Search Queue</h1>
-    <div class="boxed" >Please enter the variable phrases separated by commas.</div><br>
+    <h1><img src="resources/images/icon.png" width="24">&nbsp; Editor - Search Queue</h1><br>
+    <div class="boxed">Please enter terms into the search queue separated by commas. Example: 'Facebook,Google Plus,Snapchat'</div><br>
     <form>
         <table align="center">
             <tr>
-                <th>Beginning phrase:</th>
-                <th><input id="beginprhase"></th>
+                <th>Constant phrase</th>
+                <th>Search queue</th>
+                <th>Constant phrase</th>
+                <th>Queue index</th>
             </tr>
             <tr>
-                <th>Variable phrases:</th>
-                <th><input id="xphrase"></th>
+                <td><input id="beginprhase"></td>
+                <td>+&nbsp;<input id="xphrase"></td>
+                <td>+&nbsp;<input id="endphrase"></td>
+                <td><input min="1" id="indexphrase" type="number" style="width: 50px"></td>
             </tr>
             <tr>
-                <th>Ending phrase:</th>
-                <th><input id="endphrase"></th>
-            </tr>
-            <tr>
-                <th>Phrase index:</th>
-                <th><input id="indexphrase" type="number" min="1"></th>
-            </tr>
-            <tr>
-                <th></th>
+                <td></td>
                 <th><br><button id="save">Save</button></th>
             </tr>
 

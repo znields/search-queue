@@ -6,13 +6,24 @@ th {
     font-family: sans-serif;
     font-size: 15px;
     font-style: normal;
-    text-align: left;
+    text-align: center;
+}
+td {
+    text-align: center;
 }
 .boxed {
     border: 1px solid black;
     background: #ffaea7;
-    width: 200px;
+    width: 350px;
     text-align: center;
     font-family: sans-serif;
     margin: auto;
+}
+
+h1 {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    padding: 12px;
+    margin: 0px 0px;
+    border: 2px solid #d4d4d4;
 }
