@@ -6,7 +6,7 @@ Search Queue adds a queue to Google search! This extension allows the user to qu
 
 ## Funcionality
 
-Search Queue has a few different features, all of which I will attempt to explain in detail here.
+Search Queue has a few different features, all of which are explained in detail here.
 
 ### Queue Editor
 
