@@ -2,6 +2,10 @@ function openQueue() {
     chrome.tabs.create({'url': chrome.extension.getURL('queue.html')});
 }
 
+function openHelp() {
+    chrome.tabs.create({'url': chrome.extension.getURL('help.html')});
+}
+
 function generateSearch(beginPhrase, xPhrase, endPhrase, indexPhrase) {
     var google = "https://www.google.com/search?q=";
     var phrases = xPhrase.replace(' ', '+').split(',');
@@ -88,5 +92,5 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('next').addEventListener('click', next);
     document.getElementById('previous').addEventListener('click', previous);
     document.getElementById('edit').addEventListener('click', openQueue);
-
+    document.getElementById('help').addEventListener('click', openHelp);
 });

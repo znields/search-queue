@@ -23,7 +23,7 @@
     },
     "previous": {
       "suggested_key": {
-        "default": "Ctrl+Shift+b"
+        "default": "Ctrl+Shift+Left"
       },
       "description": "Previous",
       "global": true
@@ -32,6 +32,7 @@
   "permissions": [
     "storage",
     "notifications",
-    "tabs"
+    "tabs",
+    "background"
   ]
 }
