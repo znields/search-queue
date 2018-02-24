@@ -1,13 +1,26 @@
 # <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png" width="24"> SearchQueue
 
-
 ## Purpose
 
 Search Queue adds a queue to Google search! This extension allows the user to queue up multiple searches and quickly make them. It was designed with market analysis in mind, however it has many use cases. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
 
 ## Funcionality
 
-Search Queue 
+Search Queue has a few different features, all of which I will attempt to explain in detail here.
+
+### Extension Popup
+
+The extension popup page can be accessed by clicking the Search Queue icon on the right of the toolbar. On this page, there are few tasks that the user can do:
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/start.png" width="24"> Start
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/next.png" width="24"> Next
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/previous.png" width="24"> Previous
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/edit.png" width="24"> Edit Queue
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/help.png" width="24"> Help
 
 ## Use Cases
 
@@ -42,3 +55,8 @@ If you would like to support the developer, please buy this extension from the w
 5. Click the 'Load unpacked extension' button.
 6. Select the root folder of the extracted source code and click 'OK'.
 7. You're done! You should now be able to use Search Queue.
+
+## Future Goals
+
+1. Revamp the Editor page to make it more intuitive for useres to add searches to the queue.
+2. Create a dedicated help page that describes the funcionality of Search Queue.
