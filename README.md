@@ -4,7 +4,7 @@
 
 Search Queue adds a queue to Google search! This extension allows the user to queue up multiple searches and quickly make them. It was designed with market analysis in mind, however it has many use cases. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
 
-## Funcionality
+## Functionality
 
 Search Queue has a few different features, all of which are explained in detail here.
 
@@ -18,7 +18,7 @@ The two 'Constant phrase' input fields allow the user to specify constant search
 
 #### Search Queue
 
-The 'Search queue' input field is where the user enters the terms that are to be successively searched. Each successive search should be entered one after the other seperated by a comma with no extra spaces added. Example: 'Facebook,Google Plus,Snapchat,Instagram'
+The 'Search queue' input field is where the user enters the terms that are to be successively searched. Each successive search should be entered one after the other separated by a comma with no extra spaces added. Example: 'Facebook,Google Plus,Snapchat,Instagram'
 
 #### Queue Index
 
@@ -38,11 +38,11 @@ The 'Start' button searches Google for the term in the search queue that the que
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/next.png" width="16"> Next
 
-The 'Next' button seraches Google for the next term in the search queue. The 'Next' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Right". 
+The 'Next' button searches Google for the next term in the search queue. The 'Next' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Right". 
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/previous.png" width="16"> Previous
 
-The 'Previous' button seraches Google for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Left". 
+The 'Previous' button searches Google for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Left". 
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/edit.png" width="16"> Edit Queue
 
@@ -62,7 +62,7 @@ If an analyst has a large number of Google searches that need to be made about a
 
 #### 2. Research
 
-If a researcher has a topic of interest with many different facets and would like to learn about each of these facets, Search Queue is helpful in effeciently generating searches for each facet relating to the topic of interest.
+If a researcher has a topic of interest with many different facets and would like to learn about each of these facets, Search Queue is helpful in efficiently generating searches for each facet relating to the topic of interest.
 
 #### 3. Spreadsheet Work
 
@@ -88,5 +88,5 @@ If you would like to support the developer, please buy this extension from the w
 
 ## Future Goals
 
-1. Revamp the Editor page to make it more intuitive for useres to add searches to the queue.
-2. Create a dedicated help page that describes the funcionality of Search Queue.
+1. Revamp the Editor page to make it more intuitive for users to add searches to the queue.
+2. Create a dedicated help page that describes the functionality of Search Queue.
