@@ -31,4 +31,4 @@ If an analyst has a large number of Google searches that need to be made about a
 #### 2. Research
 If a researcher has a topic of interest with many different facets and would like to learn about each of these facets, Search Queue is helpful in effeciently generating searches for each facet relating to the topic of interest.
 #### 3. Spreadsheet Work
-If a user is doing work which involves making Google searches from spreadsheet, instead of switching between the spreadsheet and Chrome for each search, the user can simply copy and paste the list of searches into Search Queue.
+If a user is doing work which involves making Google searches from a spreadsheet, instead of switching between the spreadsheet and Chrome for each search, the user can simply copy and paste the list of searches into Search Queue.
