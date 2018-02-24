@@ -1,4 +1,4 @@
-# SearchQueue
+# ![alt text](https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png) SearchQueue
 
 ## Purpose
 
