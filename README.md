@@ -1,4 +1,4 @@
-# ![alt text](https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png | width=30) SearchQueue
+# ![](https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png | width=30) SearchQueue
 
 ## Purpose
 
