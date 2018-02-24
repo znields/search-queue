@@ -90,3 +90,4 @@ If you would like to support the developer, please buy this extension from the w
 
 1. Revamp the Editor page to make it more intuitive for users to add searches to the queue.
 2. Create a dedicated help page that describes the functionality of Search Queue.
+3. Add ability to automatically highlight queued search term.
