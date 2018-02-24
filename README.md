@@ -1,6 +1,6 @@
-# ![]() SearchQueue
+# <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png" width="24"> SearchQueue
 
-<img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png" width="48">
+
 ## Purpose
 
 Search Queue adds a queue to Google search! This extension allows the user to queue up multiple searches and quickly make them. It was designed with market analysis in mind, however it has many use cases. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
