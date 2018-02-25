@@ -81,7 +81,7 @@ If you would like to support the developer, please buy this extension from the w
 1. Download this repository from GitHub.
 2. Extract the source code if necessary.
 3. Open Google Chrome and navigate to chrome://extensions.
-4. Check 'Developer mode' on the top right.
+4. Check the 'Developer mode' checkbox on the top right.
 5. Click the 'Load unpacked extension' button.
 6. Select the root folder of the extracted source code and click 'OK'.
 7. You're done! You should now be able to use Search Queue.
