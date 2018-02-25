@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Search Queue adds a queue to Google search! This extension allows the user to queue up multiple searches and quickly make them. It was designed with market analysis in mind, however it has many use cases. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
+Search Queue adds a queue to Google search! This extension allows the user to queue up multiple searches and quickly make them. It was designed with market analysis in mind, however it has many uses. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
 
 ## Functionality
 
@@ -10,7 +10,7 @@ Search Queue has a few different features, all of which are explained in detail 
 
 ### Queue Editor
 
-The queue editor automatically opens after Queue Search has been installed. It can also be accessed by clicking on the Queue Search icon in the toolbar and then 'Edit Queue'. The queue editor's primary purpose is to allow the user to add or remove searches from the queue. The following is a functional description of each of the input fields on the editor page:
+The queue editor automatically opens after Queue Search has been installed. It can also be accessed by first clicking on the Queue Search icon in the toolbar and then on 'Edit Queue'. The queue editor's primary purpose is to allow the user to add or remove searches from the queue. The following is a functional description of each of the input fields on the editor page:
 
 #### Constant Phrase
 
@@ -22,7 +22,7 @@ The 'Search queue' input field is where the user enters the terms that are to be
 
 #### Queue Index
 
-The queue index determines which term will be searched in the search queue. Using the previous example of a search queue of 'Facebook,Google Plus,Snapchat,Instagram', if the search index is 2, then the term 'Google Plus' will be searched. The queue index must be a value between 1 and the number of items in the search queue.
+The queue index determines which term will be searched in the search queue. In most casees, this value will be set to 1 as to start searching from the beginning of the queue. Note that each time the user requests the next search in the queue, the queue index is incremented by 1.
 
 #### Save
 
