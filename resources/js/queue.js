@@ -1,40 +1,54 @@
-function save_options() {
+function import_() {
 
-    if (document.getElementById('indexphrase').value > document.getElementById('xphrase').value.split(',').length) {
-        chrome.storage.sync.set({
-            beginPhrase: document.getElementById('beginprhase').value,
-            xPhrase: document.getElementById('xphrase').value,
-            endPhrase: document.getElementById('endphrase').value,
-        });
-        alert("Queue index must be less than or equal to the number of searches queued.");
-    }
-    else {
-        chrome.storage.sync.set({
-            beginPhrase: document.getElementById('beginprhase').value,
-            xPhrase: document.getElementById('xphrase').value,
-            endPhrase: document.getElementById('endphrase').value,
-            indexPhrase: document.getElementById('indexphrase').value
-        });
-    }
 }
 
-function restore_options() {
-    chrome.storage.sync.get({
-        beginPhrase: '',
-        xPhrase: '',
-        endPhrase: '',
-        indexPhrase: 1
-    }, function (items) {
-        document.getElementById('beginprhase').value = items.beginPhrase;
-        document.getElementById('xphrase').value = items.xPhrase;
-        document.getElementById('endphrase').value = items.endPhrase;
-        document.getElementById('indexphrase').value = items.indexPhrase;
+function clear() {
+
+}
+
+function add() {
+    chrome.storage.local.get(['numSearches'], function (items) {
+        if (items.numSearches === undefined) {
+            items.numSearches = 1;
+        }
+        var text = document.createElement("p");
+        text.innerText = "Search " + items.numSearches;
+        text.align = "left";
+        text.fontFamily = "sans-serif";
+        text.margin = "30px";
+        document.getElementById("searches").appendChild(text);
+
+        var button = document.createElement("input");
+        button.id = "delete" + items.numSearches;
+        button.type = 'image';
+        button.align = 'left';
+        button.src = "/resources/images/delete.png";
+        button.width = "20";
+        document.getElementById("searches").appendChild(button);
+
+        var input = document.createElement("input");
+        input.id = 'search' + items.numSearches;
+        input.type = 'text';
+        input.align = 'left';
+        document.getElementById("searches").appendChild(input);
+
+        chrome.storage.local.set({
+            "numSearches": items.numSearches + 1
+        });
     });
+
+
 }
 
-document.addEventListener('DOMContentLoaded', restore_options);
+function restore() {
+    chrome.storage.local.set({"numSearches": 1});
 
-window.onload = function () {
-    document.getElementById('save').addEventListener('click', save_options);
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    restore();
+    document.getElementById('import').addEventListener('click', import_);
+    document.getElementById('clear').addEventListener('click', clear);
+    document.getElementById('add').addEventListener('click', add);
+});
 
