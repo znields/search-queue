@@ -25,26 +25,20 @@ input[type=text] {
 div {
     width: 300px;
     margin: auto;
+    text-align: left;
+}
+
+#term-commands {
+    text-align: center;
 }
 
 #commands {
     margin-top: 5px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 #constants {
     width: 300px;
     text-align: left;
-}
-
-#searches {
-    width: 340px;
-}
-
-.searches {
-    width: 300px;
-}
-
-.termDivs {
-    width: 340px;
 }

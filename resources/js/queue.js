@@ -7,12 +7,19 @@ function clear() {
     while (searches.firstChild) {
         searches.removeChild(searches.firstChild);
     }
+    chrome.storage.local.set({"numSearches": 1});
 }
 
-function delete_(term) {
-    document.getElementById('text' + term).remove();
-    document.getElementById('delete' + term).remove();
-    document.getElementById('search' + term).remove();
+function remove() {
+    var termDivs = document.getElementsByClassName("termDivs");
+    termDivs[0].parentNode.removeChild(termDivs[termDivs.length - 1]);
+
+    chrome.storage.local.get(["numSearches"], function (items) {
+        chrome.storage.local.set({
+            "numSearches": items.numSearches - 1
+        });
+    });
+
 }
 
 function add() {
@@ -24,41 +31,23 @@ function add() {
 
         // Creates a div for each term
         var div = document.createElement("div");
-        div.id = "div" + items.numSearches;
         div.classList.add("termDivs");
 
         // Creates a p to display each term
         var text = document.createElement("p");
-        text.id = "text" + items.numSearches;
         text.innerText = "Search " + items.numSearches;
         text.align = "left";
-        text.fontFamily = "sans-serif";
         text.margin = "30px";
         document.getElementById("searches").appendChild(text);
 
-        // Creates a button that can be used to delete term
-        var button = document.createElement("input");
-        button.id = "delete" + items.numSearches;
-        button.type = 'image';
-        button.align = 'left';
-        button.src = "/resources/images/delete.png";
-        button.width = "20";
-        document.getElementById("searches").appendChild(button);
-
         // Creates an input term
         var input = document.createElement("input");
-        input.id = 'search' + items.numSearches;
+        input.classList.add("searches");
         input.type = 'text';
         input.align = 'left';
 
-        // Adds an event listener to the delete button
-        document.getElementById('delete' + items.numSearches).addEventListener('click', function () {
-            delete_(items.numSearches);
-        });
-
         // Appends the search items to div
         div.appendChild(text);
-        div.appendChild(button);
         div.appendChild(input);
 
         // Appends div to the searches list
@@ -80,5 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('import').addEventListener('click', import_);
     document.getElementById('clear').addEventListener('click', clear);
     document.getElementById('add').addEventListener('click', add);
+    document.getElementById('remove').addEventListener('click', remove);
 });
 
