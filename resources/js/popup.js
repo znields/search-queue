@@ -3,21 +3,7 @@ function openHelp() {
 }
 
 function start() {
-    chrome.storage.sync.get({
-        beginPhrase: '',
-        xPhrase: '',
-        endPhrase: '',
-        indexPhrase: 1
-    }, function (items) {
-        if (items.xPhrase === '') {
-            notify("Your queue is empty! Please add items to queue with the queue editor.")
-        }
-        else {
-            var term = generateSearch(items.beginPhrase, items.xPhrase, items.endPhrase, items.indexPhrase - 1);
-            chrome.tabs.update({'url': term});
-        }
 
-    });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
