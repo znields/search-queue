@@ -3,7 +3,9 @@ function openHelp() {
 }
 
 function start() {
-
+    chrome.storage.local.get(null, function (items) {
+        search(items["search" + items["index"]], items["prepend"], items["append"]);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function () {

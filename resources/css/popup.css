@@ -1,3 +1,7 @@
+body {
+    margin: 0px 0px;
+}
+
 div {
     cursor: pointer;
     text-align: left;

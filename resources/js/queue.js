@@ -1,4 +1,17 @@
-function importSearches() {
+function openImport() {
+    document.getElementById("import-prompt").style.display = "block";
+}
+
+function saveImport() {
+    document.getElementById("import-prompt").style.display = "none";
+    var searches = document.getElementById("import-text").value.split("\n");
+    chrome.storage.local.get(["numSearches"], function (items) {
+        for (i = 0; i < searches.length; i++) {
+            addHelper(searches[i], i + 1 + items["numSearches"]);
+        }
+        chrome.storage.local.set({"numSearches": items["numSearches"] + searches.length});
+    });
+    document.getElementById("import-text").value = "";
 }
 
 function save() {
@@ -18,7 +31,7 @@ function clear() {
     while (searches.firstChild) {
         searches.removeChild(searches.firstChild);
     }
-    chrome.storage.local.set({"numSearches": 1});
+    chrome.storage.local.set({"numSearches": 0});
 }
 
 function remove() {
@@ -81,10 +94,11 @@ function restore() {
 
 document.addEventListener('DOMContentLoaded', function () {
     restore();
-    document.getElementById('import').addEventListener('click', importSearches);
+    document.getElementById('import').addEventListener('click', openImport);
     document.getElementById('save').addEventListener('click', save);
     document.getElementById('clear').addEventListener('click', clear);
     document.getElementById('add').addEventListener('click', add);
     document.getElementById('remove').addEventListener('click', remove);
+    document.getElementById("save-import").addEventListener("click", saveImport);
 });
 
