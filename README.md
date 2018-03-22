@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Search Queue adds a queue to Google search! This extension allows the user to queue up multiple searches and quickly make them. It was designed with market analysis in mind, however it has many uses. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
+Search Queue adds a queue to Google search! This extension allows the user to queue up multiple searches and quickly make them. It was designed with market analysis in mind, however, it has many uses. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
 
 ## Functionality
 
@@ -14,11 +14,11 @@ The queue editor automatically opens after Queue Search has been installed. It c
 
 #### Prepended Phrase
 
-The prepended phrase is added to the beginning of every search made by SearchQueue. For example, if the prepended phrase is set to "Apple" and the first search term is set to "iPhone", when the user makes the first search, results for the phrase "Apple iPhone" will be displayed.
+The prepended phrase is added to the beginning of every search made by SearchQueue. For example, if the prepended phrase is set to "Apple" and the first search term is set to "iPhone" when the user makes the first search, results for the phrase "Apple iPhone" will be displayed.
 
 #### Appended Phrase
 
-The 'Appended phrase' is added to the end of every search made by SearchQueue. For example, if the appended phrase is set to "stock price" and the first search term is set to "Apple", when the user makes the first search, results for the phrase "Apple stock price" will be displayed.
+The 'Appended phrase' is added to the end of every search made by SearchQueue. For example, if the appended phrase is set to "stock price" and the first search term is set to "Apple" when the user makes the first search, results for the phrase "Apple stock price" will be displayed.
 
 #### Import
 
@@ -26,7 +26,7 @@ The 'Import' button is used to display a popup that allows the user to quickly i
 
 #### Save
 
-The 'Save' button is used to save all user input, including the prepend phrase, the append phrase, and all added searches.
+The 'Save' button is used to save all user input, including the prepend phrase, the appended phrase, and all added searches.
 
 #### Clear
 
@@ -66,7 +66,7 @@ The 'Help' button navigates the user to the Search Queue repository.
 
 ## Use Cases
 
-In general, Search Queue is a great for anyone who needs to make many Google searches. A few specific examples of how it might be used are as follows:
+In general, Search Queue is great for anyone who needs to make many Google searches. A few specific examples of how it might be used are as follows:
 
 #### 1. Analysis
 
