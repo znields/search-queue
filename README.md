@@ -100,7 +100,6 @@ If a user is doing work which involves making Google searches from a spreadsheet
 
 ## Future Goals
 
-1. Revamp the Editor page to make it more intuitive for users to add searches to the queue.
-2. Create a dedicated help page that describes the functionality of Search Queue.
-3. Add ability to automatically highlight queued search term.
-4. Clean up and enhance the search generation algorithm.
+1. Create a dedicated help page that describes the functionality of Search Queue.
+2. Add the ability to automatically highlight queued search term.
+3. Add the ability to quickly view and browse the queue from the popup menu.
