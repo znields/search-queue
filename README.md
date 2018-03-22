@@ -4,6 +4,24 @@
 
 Search Queue adds a queue to Google search! This extension allows the user to queue up multiple searches and quickly make them. It was designed with market analysis in mind, however, it has many uses. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
 
+## Set Up
+
+There are two main ways you can run this extension:
+
+#### 1. Chrome Web Store
+
+If you would like to support the developer, please buy this extension from the web store: https://goo.gl/e464Sz.
+
+#### 2. Developer Installation
+
+1. Download this repository from GitHub.
+2. Extract the source code if necessary.
+3. Open Google Chrome and navigate to chrome://extensions.
+4. Check the 'Developer mode' checkbox on the top right.
+5. Click the 'Load unpacked extension' button.
+6. Select the root folder of the source code and click 'OK'.
+7. You're done! You should now be able to use Search Queue.
+
 ## Functionality
 
 Search Queue has a few different features, all of which are explained in detail here.
@@ -79,24 +97,6 @@ If a researcher has a topic of interest with many different facets and would lik
 #### 3. Spreadsheet Work
 
 If a user is doing work which involves making Google searches from a spreadsheet, instead of switching between the spreadsheet and Google for each search, the user can simply copy and paste the list of searches into Search Queue.
-
-## Set Up
-
-There are two main ways you can run this extension:
-
-#### 1. Chrome Web Store
-
-If you would like to support the developer, please buy this extension from the web store: https://goo.gl/e464Sz.
-
-#### 2. Developer Installation
-
-1. Download this repository from GitHub.
-2. Extract the source code if necessary.
-3. Open Google Chrome and navigate to chrome://extensions.
-4. Check the 'Developer mode' checkbox on the top right.
-5. Click the 'Load unpacked extension' button.
-6. Select the root folder of the source code and click 'OK'.
-7. You're done! You should now be able to use Search Queue.
 
 ## Future Goals
 
