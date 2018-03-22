@@ -84,8 +84,18 @@ function add() {
 
 function restore() {
     chrome.storage.local.get(null, function (items) {
-        document.getElementById("prepend").value = items["prepend"];
-        document.getElementById("append").value = items["append"];
+        if (items["prepend"] != undefined) {
+            document.getElementById("prepend").value = items["prepend"];
+        }
+        if (items["prepend"] != undefined) {
+            document.getElementById("append").value = items["append"];
+        }
+        if (items["numSearches"] === undefined) {
+            chrome.storage.local.set({"numSearches": 0});
+        }
+        if (items["index"] === undefined) {
+            chrome.storage.local.set({"index": 0});
+        }
         for (i = 0; i < items["numSearches"]; i++) {
             addHelper(items["search" + i], i + 1);
         }
