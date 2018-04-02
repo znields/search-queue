@@ -1,5 +1,5 @@
 # <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png" width="24"> Search Queue
-[![MIT license](https://img.shields.io/badge/build-passing-brightgreen.svg)]
+![Build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ## Purpose
 
