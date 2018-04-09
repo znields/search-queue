@@ -104,3 +104,4 @@ If a user is doing work which involves making Google searches from a spreadsheet
 1. Add the ability to automatically highlight queued search term.
 2. Add the ability to quickly view and browse the queue from the popup menu.
 3. Create a dedicated help page that describes the functionality of Search Queue.
+4. Add the ability to change which website is searched (e.g Google Scholar, YouTube, Bing).
