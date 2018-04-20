@@ -12,26 +12,26 @@
     "default_popup": "popup.html",
     "default_icon": "resources/images/icon.png"
   },
-  "commands": {
-    "next": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+Right",
-        "windows": "Ctrl+Shift+Right",
-        "mac": "Command+Shift+Right"
-      },
-      "description": "Next",
-      "global": false
-    },
-    "previous": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+Left",
-        "windows": "Ctrl+Shift+Left",
-        "mac": "Command+Shift+Left"
-      },
-      "description": "Previous",
-      "global": false
-    }
-  },
+//  "commands": {
+//    "next": {
+//      "suggested_key": {
+//        "default": "Ctrl+Shift+Right",
+//        "windows": "Ctrl+Shift+Right",
+//        "mac": "Command+Shift+Right"
+//      },
+//      "description": "Next",
+//      "global": false
+//    },
+//    "previous": {
+//      "suggested_key": {
+//        "default": "Ctrl+Shift+Left",
+//        "windows": "Ctrl+Shift+Left",
+//        "mac": "Command+Shift+Left"
+//      },
+//      "description": "Previous",
+//      "global": false
+//    }
+//  },
   "permissions": [
     "storage",
     "notifications",

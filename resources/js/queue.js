@@ -1,7 +1,9 @@
+// displays the import page which allows the user to import multiple terms
 function openImport() {
     document.getElementById("import-prompt").style.display = "block";
 }
 
+// processes and saves the terms entered on the import page
 function saveImport() {
     document.getElementById("import-prompt").style.display = "none";
     var searches = document.getElementById("import-text").value.split("\n");
@@ -14,6 +16,7 @@ function saveImport() {
     document.getElementById("import-text").value = "";
 }
 
+// saves the prepended and appended phrases, as well as all terms
 function save() {
     var searches = document.getElementsByClassName("searches");
     var terms = {};
@@ -26,24 +29,29 @@ function save() {
     chrome.storage.local.set(terms);
 }
 
+// clears all queued search terms
 function clear() {
     var searches = document.getElementById("searches");
     while (searches.firstChild) {
         searches.removeChild(searches.firstChild);
     }
+    save();
     chrome.storage.local.set({"numSearches": 0});
 }
 
+// removes the last term from the
 function remove() {
     var termDivs = document.getElementsByClassName("termDivs");
+    var searchName = "search" + termDivs.length;
     termDivs[0].parentNode.removeChild(termDivs[termDivs.length - 1]);
 
     chrome.storage.local.get(["numSearches"], function (items) {
         chrome.storage.local.set({
+            searchName: "",
             "numSearches": items.numSearches - 1
         });
     });
-
+    save();
 }
 
 function addHelper(value, i) {
@@ -64,6 +72,7 @@ function addHelper(value, i) {
     input.type = "text";
     input.align = "left";
     input.value = value;
+    input.addEventListener("change", save);
 
     // Appends the search items to div
     div.appendChild(text);
@@ -105,10 +114,13 @@ function restore() {
 document.addEventListener('DOMContentLoaded', function () {
     restore();
     document.getElementById('import').addEventListener('click', openImport);
-    document.getElementById('save').addEventListener('click', save);
     document.getElementById('clear').addEventListener('click', clear);
     document.getElementById('add').addEventListener('click', add);
     document.getElementById('remove').addEventListener('click', remove);
     document.getElementById("save-import").addEventListener("click", saveImport);
 });
+
+window.addEventListener("beforeunload", function (e) {
+    save();
+}, false);
 
