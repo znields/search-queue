@@ -16,7 +16,7 @@ There are two main ways you can run this extension:
 
 If you would like to support the developer, please buy this extension from the web store: https://goo.gl/e464Sz.
 
-#### 2. Developer Installation
+#### 2. Manual Installation
 
 1. Download this repository from GitHub.
 2. Extract the source code if necessary.
