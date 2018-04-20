@@ -1,5 +1,5 @@
 # <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png" width="24"> Search Queue
-#### A queue for Google search!
+##### A queue for Google search!
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)
 ![Build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/isaiahnields/SearchQueue/blob/master/LICENSE)
