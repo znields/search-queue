@@ -1,6 +1,6 @@
 # <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png" width="24"> Search Queue
 
-![Github All Releases](https://img.shields.io/github/downloads/isaiahnields/SearchQueue/total.svg)
+![Github All Releases](https://img.shields.io/github/downloads/apple/swift/total.svg)
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/isaiahnields/SearchQueue/blob/master/LICENSE)
 ![Build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
