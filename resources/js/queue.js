@@ -1,3 +1,5 @@
+/* Queue.js contains all of the functions that are solely used on the queue.html page. */
+
 // displays the import page which allows the user to import multiple terms
 function openImport() {
     document.getElementById("import-prompt").style.display = "block";
@@ -39,7 +41,7 @@ function clear() {
     chrome.storage.local.set({"numSearches": 0});
 }
 
-// removes the last term from the
+// removes the last term from the search queue
 function remove() {
     var termDivs = document.getElementsByClassName("termDivs");
     var searchName = "search" + termDivs.length;
@@ -54,6 +56,7 @@ function remove() {
     save();
 }
 
+// helps the add function add a new search term
 function addHelper(value, i) {
     // Creates a div for each term
     var div = document.createElement("div");
@@ -70,7 +73,6 @@ function addHelper(value, i) {
     var input = document.createElement("input");
     input.classList.add("searches");
     input.type = "text";
-    input.align = "left";
     input.value = value;
     input.addEventListener("change", save);
 
@@ -82,6 +84,7 @@ function addHelper(value, i) {
     document.getElementById("searches").appendChild(div);
 }
 
+// adds a new search term
 function add() {
     chrome.storage.local.get(["numSearches"], function (items) {
         addHelper(null, items.numSearches + 1)
@@ -91,6 +94,7 @@ function add() {
     });
 }
 
+// restores the queue editor page on load
 function restore() {
     chrome.storage.local.get(null, function (items) {
         if (items["prepend"] != undefined) {
@@ -111,6 +115,7 @@ function restore() {
     });
 }
 
+// restores queue editor page and links functions to their buttons
 document.addEventListener('DOMContentLoaded', function () {
     restore();
     document.getElementById('import').addEventListener('click', openImport);
@@ -120,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("save-import").addEventListener("click", saveImport);
 });
 
+// saves the queue editor terms before closing
 window.addEventListener("beforeunload", function (e) {
     save();
 }, false);

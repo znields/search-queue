@@ -1,6 +1,4 @@
-/*
-Popup.js contains all functions that are strictly required on the popup.html page.
-*/
+/* Popup.js contains all functions that are solely required on the popup.html page. */
 
 // opens the help page on GitHub
 function openHelp() {
