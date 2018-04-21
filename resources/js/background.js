@@ -1,7 +1,14 @@
+/*
+Background.js contains all functions that can be run at any time while Chrome is running.
+Functions should be included in this file only if entirely necessary as to improve performance.
+*/
+
+// opens the queue page in a new tab
 function openQueue() {
     chrome.tabs.create({'url': chrome.extension.getURL('queue.html')});
 }
 
+// sends a notification to the user given a certain message
 function notify(message) {
     var options = {
         type: "basic",
@@ -12,11 +19,13 @@ function notify(message) {
     chrome.notifications.create("0", options, function () {  });
 }
 
+// searches google for a given appended phrase, search term, and prepended phrase
 function search(search, prepend, append) {
     var google = "https://www.google.com/search?q=";
     chrome.tabs.update({"url": google + prepend + "+" + search + "+" + append});
 }
 
+// searches the next term in the search queue
 function next() {
     chrome.storage.local.get(null, function (items) {
         console.log(items["index"] + 1 + '>=' + items["numSearches"]);
@@ -30,6 +39,7 @@ function next() {
     });
 }
 
+// searches the previous term in the search queue
 function previous() {
     chrome.storage.local.get(null, function (items) {
         console.log(items["index"] + '<=' + '0');
@@ -43,6 +53,7 @@ function previous() {
     });
 }
 
+// sets up keyboard shortcuts
 function command(string) {
     if (string === 'next') {
         next();
@@ -52,8 +63,10 @@ function command(string) {
     }
 }
 
+// open the queue editor when the extension is installed
 chrome.runtime.onInstalled.addListener(function (object) {
     openQueue()
 });
 
+// sets up keyboard shortcuts
 chrome.commands.onCommand.addListener(command);
