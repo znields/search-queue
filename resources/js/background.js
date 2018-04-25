@@ -105,3 +105,8 @@ chrome.runtime.onInstalled.addListener(function ()
     // opens queue.html
     openQueue()
 });
+
+// adds a listener for keyboard shortcuts
+chrome.commands.onCommand.addListener(function (command_) {
+    command(command_);
+});
