@@ -35,6 +35,10 @@ If you would like to support the developer, please buy this extension from the w
 6. Select the root folder of the source code and click 'OK'.
 7. You're done! You should now be able to use Search Queue.
 
+## Functionality
+
+Search Queue has a few different features, all of which are explained in detail here.
+
 ### Extension Popup
 
 The extension popup page can be accessed by clicking the Search Queue icon on the right of the toolbar. On this page, there are few tasks that the user can do:
@@ -58,10 +62,6 @@ The 'Edit Queue' button navigates the user to the queue editor page.
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/help.png" width="16"> Help
 
 The 'Help' button navigates the user to the Search Queue repository.
-
-## Functionality
-
-Search Queue has a few different features, all of which are explained in detail here.
 
 ### Queue Editor
 
