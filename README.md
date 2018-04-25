@@ -35,6 +35,30 @@ If you would like to support the developer, please buy this extension from the w
 6. Select the root folder of the source code and click 'OK'.
 7. You're done! You should now be able to use Search Queue.
 
+### Extension Popup
+
+The extension popup page can be accessed by clicking the Search Queue icon on the right of the toolbar. On this page, there are few tasks that the user can do:
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/start.png" width="16"> Start
+
+The 'Start' button searches Google for the term in the search queue that the queue index points to.
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/next.png" width="16"> Next
+
+The 'Next' button searches Google for the next term in the search queue. The 'Next' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Right'. 
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/previous.png" width="16"> Previous
+
+The 'Previous' button searches Google for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Left'. 
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/edit.png" width="16"> Edit Queue
+
+The 'Edit Queue' button navigates the user to the queue editor page.
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/help.png" width="16"> Help
+
+The 'Help' button navigates the user to the Search Queue repository.
+
 ## Functionality
 
 Search Queue has a few different features, all of which are explained in detail here.
@@ -66,30 +90,6 @@ The '+' button adds a new search to the queue.
 #### - Remove Search
 
 The '-' button removes the last search from the queue.
-
-### Extension Popup
-
-The extension popup page can be accessed by clicking the Search Queue icon on the right of the toolbar. On this page, there are few tasks that the user can do:
-
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/start.png" width="16"> Start
-
-The 'Start' button searches Google for the term in the search queue that the queue index points to.
-
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/next.png" width="16"> Next
-
-The 'Next' button searches Google for the next term in the search queue. The 'Next' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Right'. 
-
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/previous.png" width="16"> Previous
-
-The 'Previous' button searches Google for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Left'. 
-
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/edit.png" width="16"> Edit Queue
-
-The 'Edit Queue' button navigates the user to the queue editor page.
-
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/help.png" width="16"> Help
-
-The 'Help' button navigates the user to the Search Queue repository.
 
 ## Use Cases
 
