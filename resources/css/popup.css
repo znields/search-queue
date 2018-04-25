@@ -2,43 +2,43 @@ body {
     margin: 0px 0px;
 }
 
-.main-button {
-    cursor: pointer;
-    text-align: left;
-    width: 100%;
-    padding: 10px 2px;
+.button {
+    padding: 8px 6px;
     font-family: sans-serif;
-    font-size: 11pt;
-    background: #FFFFFF;
+    font-size: 14px;
 }
 
-div:first-child {
-    margin-top: 0px;
-}
-
-div:hover {
-    background: #e1e1e1;
-}
-
-h2 {
-    font-family: sans-serif;
-    background: #f5f5f5;
-    padding: 12px;
-    margin: 0px 0px;
-    border: 2px solid #d4d4d4;
+.button:hover {
+    background: whitesmoke;
 }
 
 #queue-view {
-    position: fixed;
     display: none;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
     background-color: white;
-    cursor: pointer;
-    text-align: center;
+    position: fixed;
+}
+
+#search-terms {
+    overflow-y: auto;
+    width: 100%;
+    height: 86%;
+}
+
+#header {
+    font-size: 20px;
+    font-weight: bold;
+    background: whitesmoke;
+    border: 1px solid lightgray;
+    padding: 10px 10px;
+}
+
+#back {
+    background: whitesmoke;
+    border: 1px solid lightgray;
+}
+
+#back:hover {
+    background: lightgray;
 }

@@ -6,30 +6,47 @@
     <link rel="icon" href="resources/images/icon.png">
     <link rel="stylesheet" href="resources/css/queue.css">
     <script src="resources/js/queue.js"></script>
-    <h1><img src="resources/images/icon.png" width="24">&nbsp; Editor - Search Queue</h1>
 </head>
 <body>
-    <div id="import-prompt">
+    <h1 id="header"><img src="resources/images/icon.png" width="24">&nbsp; Editor - Search Queue</h1>
+
+    <div id="import-container">
+
         <p>Please enter searches separated by a new line.</p>
         <textarea id="import-text" rows="25" cols="50"></textarea><br>
-        <button id="save-import">Save</button>
-    </div>
-    <div id="constants" align="center">
-        <p>Prepended phrase</p>
-        <input id="prepend" type="text"><br>
-        <p class = "constants">Appended phrase</p>
-        <input id="append" type="text">
-    </div>
-    <div id="commands" align="center">
-        <button id="import">Import</button>
-        <button id="clear">Clear</button>
-    </div>
-    <div id="searches" align="center">
+        <button id="import-save">Save</button>
 
     </div>
-    <div id="term-commands" align="center">
-        <button id="add">+</button>
-        <button id="remove">-</button>
+
+    <div id="term-container">
+
+        <div id="phrase-container" class="main-container" align="center">
+
+            <p class="input-title">Prepended phrase</p>
+            <input id="prepend" type="text">
+
+            <p class="input-title">Appended phrase</p>
+            <input id="append" type="text">
+
+        </div>
+
+        <div id="command-container" class="main-container" align="center">
+
+            <button id="import-open">Import</button>
+            <button id="clear">Clear</button>
+
+        </div>
+
+        <div id="search-container" align="center">
+        </div>
+
+        <div id="term-command-container" class="main-container" align="center">
+
+            <button id="add">+</button>
+            <button id="remove">-</button>
+
+        </div>
+
     </div>
 
 </body>
