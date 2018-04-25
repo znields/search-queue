@@ -57,7 +57,7 @@ The 'Previous' button searches Google for the previous term in the search queue.
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/view.png" width="16"> Edit Queue
 
-The 'View Queue' button presents a clickable list of all the items in the queue. When 
+The 'View Queue' button presents a clickable list of all the items in the queue. When a term is clicked, the term is immediately searched.
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/edit.png" width="16"> Edit Queue
 
