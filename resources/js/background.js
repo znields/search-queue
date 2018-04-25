@@ -7,7 +7,7 @@ Functions should be included in this file only if entirely necessary as to impro
 function openQueue()
 {
     // creates a new tab and loads queue.html
-    chrome.tabs.create({'url': chrome.extension.getURL('queue.html')});
+    chrome.tabs.update({'url': chrome.extension.getURL('queue.html')});
 }
 
 // sends a notification to the user given a certain message
