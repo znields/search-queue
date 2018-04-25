@@ -7,11 +7,11 @@ A queue for Google search!
 
 ## Table of Contents
 
-[1. Purpose](#purpose) 
-[2. Set Up](#set-up) 
-[3. Functionality](#functionality) 
-[4. Use Cases](#use-cases) 
-[5. Future Goals](#future-goals) 
+[1. Purpose](#purpose)<br />
+[2. Set Up](#set-up)<br />
+[3. Functionality](#functionality)<br />
+[4. Use Cases](#use-cases)<br />
+[5. Future Goals](#future-goals)<br />
 
 ## Purpose
 
