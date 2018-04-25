@@ -55,7 +55,7 @@ The 'Next' button searches Google for the next term in the search queue. The 'Ne
 
 The 'Previous' button searches Google for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Alt+Up'. 
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/view.png" width="16"> Edit Queue
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/view.png" width="16"> View Queue
 
 The 'View Queue' button presents a clickable list of all the search terms in the queue. Upon clicking a term, it is immediately searched.
 
