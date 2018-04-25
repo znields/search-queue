@@ -15,7 +15,7 @@ A queue for Google search!
 
 ## Purpose
 
-Search Queue adds a queue to Google search! This extension allows the user to queue up multiple searches and quickly make them. It was designed with market analysis in mind, however, it has many uses. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
+Search Queue adds a queue to Google search! This extension can queue up multiple searches and quickly make them. It was designed with market analysis in mind, however, it has many uses. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
 
 ## Set Up
 
@@ -41,7 +41,7 @@ Search Queue has a few different features, all of which are explained in detail 
 
 ### Extension Popup
 
-The extension popup page can be accessed by clicking the Search Queue icon on the right of the toolbar. On this page, there are few tasks that the user can do:
+The extension popup page can be accessed by clicking the Search Queue icon on the right of the toolbar. On this page, there are few tasks that can be completed:
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/start.png" width="16"> Start
 
@@ -49,35 +49,39 @@ The 'Start' button searches Google for the term in the search queue that the que
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/next.png" width="16"> Next
 
-The 'Next' button searches Google for the next term in the search queue. The 'Next' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Right'. 
+The 'Next' button searches Google for the next term in the search queue. The 'Next' button can also be quickly activated with the keyboard shortcut 'Alt-Down'. 
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/previous.png" width="16"> Previous
 
-The 'Previous' button searches Google for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Ctrl+Shift+Left'. 
+The 'Previous' button searches Google for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Alt+Up'. 
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/view.png" width="16"> Edit Queue
+
+The 'View Queue' button presents a clickable list of all the items in the queue. When 
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/edit.png" width="16"> Edit Queue
 
-The 'Edit Queue' button navigates the user to the queue editor page.
+The 'Edit Queue' button navigates to the queue editor page.
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/help.png" width="16"> Help
 
-The 'Help' button navigates the user to the Search Queue repository.
+The 'Help' button navigates to the Search Queue repository.
 
 ### Queue Editor
 
-The queue editor automatically opens after Queue Search has been installed. It can also be accessed by first clicking on the Queue Search icon in the toolbar and then on 'Edit Queue'. The queue editor's primary purpose is to allow the user to add or remove searches from the queue. The following is a functional description of each of the input fields and buttons on the editor page:
+The queue editor automatically opens after Queue Search has been installed. It can also be accessed by first clicking on the Queue Search icon in the toolbar and then on 'Edit Queue'. The queue editor's primary purpose is to allow for the addition or removal of searches from the queue. The following is a functional description of each of the input fields and buttons on the editor page:
 
 #### Prepended Phrase
 
-The prepended phrase is added to the beginning of every search made by SearchQueue. For example, if the prepended phrase is set to "Apple" and the first search term is set to "iPhone" when the user makes the first search, results for the phrase "Apple iPhone" will be displayed.
+The prepended phrase is added to the beginning of every search made by SearchQueue. For example, if the prepended phrase is set to "Apple" and the first search term is set to "iPhone" when the first search is made, results for the phrase "Apple iPhone" will be displayed.
 
 #### Appended Phrase
 
-The 'Appended phrase' is added to the end of every search made by SearchQueue. For example, if the appended phrase is set to "stock price" and the first search term is set to "Apple" when the user makes the first search, results for the phrase "Apple stock price" will be displayed.
+The 'Appended phrase' is added to the end of every search made by SearchQueue. For example, if the appended phrase is set to "stock price" and the first search term is set to "Apple" when the first search is made, results for the phrase "Apple stock price" will be displayed.
 
 #### Import
 
-The 'Import' button is used to display a popup that allows the user to quickly import searches. The searches should be entered into the text box separated by new lines.
+The 'Import' button is used to display a popup which allows for searches to be quickly imported. The searches should be entered into the text box separated by new lines.
 
 #### Clear
 
