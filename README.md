@@ -55,13 +55,9 @@ The 'Appended phrase' is added to the end of every search made by SearchQueue. F
 
 The 'Import' button is used to display a popup that allows the user to quickly import searches. The searches should be entered into the text box separated by new lines.
 
-#### Save
-
-The 'Save' button is used to save all user input, including the prepend phrase, the appended phrase, and all added searches.
-
 #### Clear
 
-The 'Clear' button is used to clear all entered searches. Note that this button does not clear the prepend and append phrases.
+The 'Clear' button is used to clear all entered searches and the appended and prepended phrases.
 
 #### + Add Search
 
