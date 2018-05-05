@@ -8,6 +8,7 @@ A queue for Google search!
 ## Table of Contents
 
 [Purpose](#purpose)<br />
+[Compatibility](#compatibility)<br />
 [Set Up](#set-up)<br />
 [Functionality](#functionality)<br />
 [Use Cases](#use-cases)<br />
