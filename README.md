@@ -25,7 +25,7 @@ There are two main ways you can run this extension:
 
 This extension is available in the Chrome Web Store:
 
-[![Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_496x150.png)](https://goo.gl/e464Sz)
+[![Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_340x96.png)](https://goo.gl/e464Sz)
 
 #### 2. Manual Installation
 
