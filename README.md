@@ -17,6 +17,10 @@ A queue for Google search!
 
 Search Queue adds a queue to Google search! This extension can queue up multiple searches and quickly make them. It was designed with market analysis in mind, however, it has many uses. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
 
+## Compatibility
+
+Search Queue is only available for Chrome. There are no plans to create versions for other web browsers.
+
 ## Set Up
 
 There are two main ways you can run this extension:
