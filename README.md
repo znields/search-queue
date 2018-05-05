@@ -113,5 +113,4 @@ If a user is doing work which involves making Google searches from a spreadsheet
 
 ## Future Goals
 
-1. Create a dedicated help page that describes the functionality of Search Queue.
-2. Add the ability to change which website is searched (e.g Google Scholar, YouTube, Bing).
+See [Projects](https://github.com/isaiahnields/SearchQueue/projects).
