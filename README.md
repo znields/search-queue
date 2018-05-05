@@ -1,7 +1,7 @@
 # <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png" width="24"> Search Queue
 A queue for Google search!
 
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
+[![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
 ![Build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/isaiahnields/SearchQueue/blob/master/LICENSE)
 
@@ -23,7 +23,9 @@ There are two main ways you can run this extension:
 
 #### 1. Chrome Web Store
 
-If you would like to support the developer, please buy this extension from the web store: https://goo.gl/e464Sz.
+This extension is available in the Chrome Web Store:
+
+[![Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_496x150.png)](https://goo.gl/e464Sz)
 
 #### 2. Manual Installation
 
