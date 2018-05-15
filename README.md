@@ -9,7 +9,7 @@ A queue for Google search!
 
 [Purpose](#purpose)<br />
 [Compatibility](#compatibility)<br />
-[Set Up](#setup)<br />
+[Setup](#setup)<br />
 [Functionality](#functionality)<br />
 [Use Cases](#use-cases)<br />
 [Future Goals](#future-goals)<br />
