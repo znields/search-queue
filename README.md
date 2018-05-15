@@ -34,13 +34,12 @@ This extension is available in the Chrome Web Store:
 
 #### 2. Manual Installation
 
-1. Download this repository from GitHub.
-2. Extract the source code if necessary.
-3. Open Google Chrome and navigate to chrome://extensions.
-4. Check the 'Developer mode' checkbox on the top right.
-5. Click the 'Load unpacked extension' button.
-6. Select the root folder of the source code and click 'OK'.
-7. You're done! You should now be able to use Search Queue.
+1. Clone this repository.
+1. Open Google Chrome and navigate to chrome://extensions.
+3. Check the 'Developer mode' checkbox on the top right.
+4. Click the 'Load unpacked extension' button.
+5. Select the root folder of the source code and click 'OK'.
+6. You're done! You should now be able to use Search Queue.
 
 ## Functionality
 
