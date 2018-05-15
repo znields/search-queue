@@ -9,7 +9,7 @@ A queue for Google search!
 
 [Purpose](#purpose)<br />
 [Compatibility](#compatibility)<br />
-[Set Up](#set-up)<br />
+[Set Up](#setup)<br />
 [Functionality](#functionality)<br />
 [Use Cases](#use-cases)<br />
 [Future Goals](#future-goals)<br />
@@ -22,7 +22,7 @@ Search Queue adds a queue to Google search! This extension can queue up multiple
 
 Search Queue is only available for Chrome. There are no plans to create versions for other web browsers.
 
-## Set Up
+## Setup
 
 There are two main ways you can run this extension:
 
