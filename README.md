@@ -47,7 +47,7 @@ Search Queue has a few different features, all of which are explained in detail 
 
 ### Extension Popup
 
-The extension popup page can be accessed by clicking the Search Queue icon on the right of the toolbar. On this page, there are few tasks that can be completed:
+The extension popup page can be accessed by clicking the Search Queue icon on the right of the toolbar. On this page, there are a few tasks that can be completed:
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/start.png" width="16"> Start
 
