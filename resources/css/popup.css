@@ -7,10 +7,11 @@ body {
     font-family: sans-serif;
     font-size: 14px;
     user-select: none;
+    height: 16px;
 }
 
 .button:hover {
-    background: whitesmoke;
+    background: #F4F4F4;
 }
 
 #queue-view {
@@ -30,15 +31,15 @@ body {
 #header {
     font-size: 20px;
     font-weight: bold;
-    background: whitesmoke;
-    border: 1px solid lightgray;
+    background: #F4F4F4;
+    border: 1px solid #CACACA;
     padding: 10px 10px;
     user-select: none;
 }
 
 #back {
-    background: whitesmoke;
-    border: 1px solid lightgray;
+    background: #F4F4F4;
+    border: 1px solid #CACACA;
 }
 
 #back:hover {

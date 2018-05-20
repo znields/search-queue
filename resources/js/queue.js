@@ -1,4 +1,4 @@
-/* Queue.js contains all of the functions that are solely used on the queue.html page. */
+/* queue.js contains all of the functions that are solely used on the queue.html page. */
 
 // displays the import page which allows the user to import multiple terms
 function openImport()
@@ -17,17 +17,17 @@ function saveImport()
     const searches = document.getElementById('import-text').value.split('\n');
 
     // retrieves the number of searches and passes into function
-    chrome.storage.local.get('searchCount', function (items)
+    chrome.storage.local.get('search-count', function (items)
     {
         // iterates over the search
         for (let i = 0; i < searches.length; i++)
         {
             // adds each search to the search queue
-            add(searches[i], i + 1 + items['searchCount']);
+            add(searches[i], i + 1 + items['search-count']);
         }
 
-        //
-        chrome.storage.local.set({'searchCount': items['searchCount'] + searches.length});
+        // increments the search count by the number of terms added
+        chrome.storage.local.set({'search-count': items['search-count'] + searches.length});
     });
 
 
@@ -44,17 +44,15 @@ function save()
     // retrieves the user entered search terms from queue.html
     const searches = document.getElementsByClassName('search-term');
 
-    // adds prepend, append, and searchCount to the packet for saving
+    // adds prepend, append, and search-count to the packet for saving
     const packet = {};
-    packet['prepend'] = document.getElementById('prepend').value;
-    packet['append'] = document.getElementById('append').value;
-    packet['searchCount'] = searches.length;
+    packet['search-count'] = searches.length;
 
     // iterates over the search terms
     for (let i = 0; i < searches.length; i++)
     {
         // adds each search term to the packet
-        packet['search' + i] =  searches[i].value;
+        packet['search' + (i+ 1)] =  searches[i].value;
     }
 
     // saves the packet to storage
@@ -74,60 +72,64 @@ function clear()
         searches.removeChild(searches.firstChild);
     }
 
-    // clears append and prepend phrases from queue.html
-    document.getElementById('append').value = "";
-    document.getElementById('prepend').value = "";
-
     // clears all items from storage
     chrome.storage.local.clear();
 
     // resets search count and index values in storage
-    chrome.storage.local.set({'searchCount': 0, 'index': 0});
+    chrome.storage.local.set({'search-count': 0, 'index': 1});
 }
 
-// removes the last term from the search queue
+// removes the term at the ith index from the search queue
 function remove(i)
 {
     // retrieves all term divs from queue.html
     const searchContainers = document.getElementsByClassName('search-container');
 
-    // if the function is called from the remove button, set i to the number of terms
-    if (typeof i === "object")
-    {
-        i = searchContainers.length;
-    }
-
     // removes the last search term from the list of terms
-    searchContainers[0].parentNode.removeChild(searchContainers[i - 1]);
-
-    // creates a variable with the name of the search term
-    const searchName = 'search' + searchContainers.length;
-
-    // removes the search term from storage
-    chrome.storage.local.remove(searchName);
+    searchContainers[0].parentNode.removeChild(document.getElementById('search-container-' + i));
 
     // retrieves the number of searches and the search term variable from storage
-    chrome.storage.local.get('searchCount', function (items)
+    chrome.storage.local.get('search-count', function (items)
     {
         // saves the deletion to the search queue
-        chrome.storage.local.set({'searchCount': items['searchCount'] - 1});
+        chrome.storage.local.set({'search-count': items['search-count'] - 1});
+        chrome.storage.local.remove('search' + items['search-count']);
     });
+
+    // adjusts the term numbers so that they are in order
+    adjustTermNumbers();
+
+    // saves the current terms to the database
+    save();
+
 }
 
 // adds a new search term
 function add(term, i)
 {
     // retrieves the number of searches from storage and passes it into function
-    chrome.storage.local.get('searchCount', function (items)
+    chrome.storage.local.get('search-count', function (items)
     {
+
+        // defines a boolean as to whether a button pressed is causing the add
+        const button_pressed = i === undefined;
+
+        // defines i depending on whether a button press took place
+        i = i === undefined ? (items['search-count'] + 1) : i;
+
         // creates a div to contain search term and number
         const container = document.createElement('div');
         container.classList.add('search-container');
+        container.id = 'search-container-' + i;
+        container.draggable = true;
+        addDragHandlers(container);
 
-        // creates a p to display each term
-        const text = document.createElement('p');
-        text.classList.add('input-title');
-        text.innerText = i === undefined ? "Search " + (items['searchCount'] + 1) : "Search " + i;
+        // create delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('delete-term-button');
+        deleteButton.id = 'delete-term-button-' + i;
+        deleteButton.innerText = i;
+        deleteButton.addEventListener('click', function () {remove(i);});
 
         // creates an input term
         const input = document.createElement('input');
@@ -137,18 +139,25 @@ function add(term, i)
         input.value = typeof term === 'object' ? "" : term;
 
         // appends the search items to div
-        container.appendChild(text);
+        container.appendChild(deleteButton);
         container.appendChild(input);
 
         // appends div to the searches list
-        document.getElementById('search-container').appendChild(container);
+        const searchContainer = document.getElementById('search-container');
+        searchContainer.insertBefore(container, searchContainer.children[i - 1]);
 
-        // if the function was called from the + button
-        if (i === undefined)
+        if (button_pressed)
         {
             // increment search count by 1
-            chrome.storage.local.set({'searchCount' : items['searchCount'] + 1});
+            chrome.storage.local.set({'search-count' : items['search-count'] + 1});
+
+            // sets the focus to the most recently added term
+            input.focus();
+            input.select();
         }
+
+        // saves the new configuration
+        save();
 
     });
 }
@@ -159,45 +168,89 @@ function restore()
     // retrieves all items from storage and passes them into function
     chrome.storage.local.get(null, function (items)
     {
-        // if the prepend variable is not undefined
-        if (items['prepend'] !== undefined)
-        {
-            // restore the prepend phrase value to its text box
-            document.getElementById('prepend').value = items['prepend'];
-        }
-
-        // if the append variable is not undefined
-        if (items['append'] !== undefined)
-        {
-            // restore the append variable to its text box
-            document.getElementById('append').value = items['append'];
-        }
-
-        // if the number of searches variable is undefined
-        if (items['searchCount'] === undefined)
-        {
-            // set the number of searches to be zero
-            chrome.storage.local.set({'searchCount': 0});
-        }
+        // set the number of searches to be zero
+        chrome.storage.local.set({'search-count': 0});
 
         // if the index variable is undefined
         if (items['index'] === undefined)
         {
             // set the index variables to be zero
-            chrome.storage.local.set({'index': 0});
+            chrome.storage.local.set({'index': 1});
         }
 
         // while there is another term to be loaded from storage
-        let i = 0;
+        let i = 1;
         while (items['search' + i] !== undefined) {
 
             // adds the term to queue.html
-            add(items['search' + i], i + 1);
+            add(items['search' + i], i);
 
             // increments i by 1
             i += 1;
         }
+
+        // updates the search-count to the number of searches
+        chrome.storage.local.set({'search-count' : i - 1});
     });
+}
+
+// adjusts the term numbers to be in order
+function adjustTermNumbers()
+{
+    // retrieve all delete buttons
+    const deleteTermButtons = document.getElementsByClassName('delete-term-button');
+
+    // iterate over all of the delete buttons
+    for (let i = 0; i < deleteTermButtons.length; i++)
+    {
+        // change the inner text to match the ordering of the buttons
+        deleteTermButtons[i].innerText = i + 1;
+    }
+}
+
+// creates a Google search for the current search term
+function start()
+{
+    // retrieves all items from storage
+    chrome.storage.local.get(null, function (items) {
+
+        // if the number of search terms is not zero
+        if (items['search-count'] !== 0)
+        {
+            // search the term at the current index
+            search(items['search' + items['index']]);
+        }
+        else
+        {
+            // alert the user that they have no searches in the queue
+            notify("You have no items in the queue!")
+        }
+    });
+}
+
+// searches the term of interest
+function search(search)
+{
+    // creates a constant for the google search
+    const google = "https://www.google.com/search?q=";
+
+    // updates the current tab to load the google search
+    chrome.tabs.update({"url": google + search});
+}
+
+// sends a notification to the user given a certain message
+function notify(message)
+{
+    // sets up the notification options
+    const options = {
+        type: "basic",
+        title: "Search Queue",
+        message: message,
+        iconUrl: "resources/images/icon.png"
+    };
+
+    // alert the user with the notification
+    chrome.notifications.create("0", options, function() {});
 }
 
 // restores queue editor page and links functions to their buttons
@@ -210,13 +263,79 @@ document.addEventListener('DOMContentLoaded', function ()
     document.getElementById('import-open').addEventListener('click', openImport);
     document.getElementById('import-save').addEventListener('click', saveImport);
     document.getElementById('clear').addEventListener('click', clear);
-    document.getElementById('add').addEventListener('click', add);
-    document.getElementById('remove').addEventListener('click', remove);
-
-    // links the prepend and append phrases input boxes to the save function
-    document.getElementById('prepend').addEventListener('change', save);
-    document.getElementById('append').addEventListener('change', save);
+    document.getElementById('add-term').addEventListener('click', add);
+    document.getElementById('start').addEventListener('click', start);
 });
 
 // saves the queue editor terms before closing
-window.addEventListener('beforeunload', function () {save();}, false);
+window.addEventListener('beforeunload', save, false);
+
+/* This portion of queue.js allows the search terms to be rearranged. */
+
+// initializes a variable that keeps track of which element is being dragged
+var draggedDiv = null;
+
+// runs when a div is picked up
+function handleDragStart(e)
+{
+    // sets the dragged div to the drag div variable
+    draggedDiv = this;
+
+    // marks the data transfer as a move rather than a copy
+    e.dataTransfer.effectAllowed = 'move';
+}
+
+// runs when an element is dragged over another element
+function handleDragOver(e)
+{
+    // allows the user to drop the element
+    if (e.preventDefault)
+    {
+        e.preventDefault();
+
+        // marks the element as being dragged over
+    }
+
+    if (draggedDiv !== this)
+    {
+        this.classList.add("dragged-over");
+    }
+
+    return false;
+}
+
+// runs when the user drags an element away
+function handleDragLeave(e)
+{
+    // marks the element as no longer being dragged over
+    this.classList.remove('dragged-over');
+}
+
+// runs when an element is dropped
+function handleDrop(e)
+{
+    // if the element is dropped in a different area
+    if (draggedDiv !== this)
+    {
+        this.classList.remove('dragged-over');
+
+        draggedDiv.parentNode.insertBefore(draggedDiv, this);
+
+        adjustTermNumbers();
+
+        save();
+
+    }
+
+    return false;
+}
+
+// adds the drag and drop handlers to an element
+function addDragHandlers(elem)
+{
+    elem.addEventListener('dragstart', handleDragStart, false);
+    elem.addEventListener('dragover', handleDragOver, false);
+    elem.addEventListener('drop', handleDrop, false);
+    elem.addEventListener('dragleave', handleDragLeave, false);
+
+}

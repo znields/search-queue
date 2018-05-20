@@ -7,26 +7,6 @@ function openHelp()
     chrome.tabs.create({'url': "https://github.com/isaiahnields/SearchQueue"});
 }
 
-// creates a Google search for the current search term
-function start()
-{
-    // retrieves all items from storage
-    chrome.storage.local.get(null, function (items) {
-
-        // if the number of search terms is not zero
-        if (items['searchCount'] !== 0)
-        {
-            // search the term at the current index
-            search(items['search' + items['index']], items['prepend'], items['append']);
-        }
-        else
-        {
-            // alert the user that they have no searches in the queue
-            notify("You have no items in the queue!")
-        }
-    });
-}
-
 // adds an overlay that allows the user to view the queue
 function viewQueue()
 {
@@ -41,6 +21,26 @@ function viewQueue()
 
         // scrolls to the item at the current search index
         document.getElementById('search' + items['index']).scrollIntoView();
+    });
+}
+
+// creates a Google search for the current search term
+function start()
+{
+    // retrieves all items from storage
+    chrome.storage.local.get(null, function (items) {
+
+        // if the number of search terms is not zero
+        if (items['search-count'] !== 0)
+        {
+            // search the term at the current index
+            search(items['search' + items['index']]);
+        }
+        else
+        {
+            // alert the user that they have no searches in the queue
+            notify("You have no items in the queue!")
+        }
     });
 }
 
@@ -103,7 +103,7 @@ function restore()
     chrome.storage.local.get(null, function (items)
     {
         // for each term in storage
-        for (let i = 0; i < items['searchCount']; i++)
+        for (let i = 1; i <= items['search-count']; i++)
         {
             // restore the term to queue.html
             add(items['search' + i], i);

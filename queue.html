@@ -14,38 +14,22 @@
 
         <p>Please enter searches separated by a new line.</p>
         <textarea id="import-text" rows="25" cols="50"></textarea><br>
-        <button id="import-save">Save</button>
+        <button id="import-save">Import</button>
 
     </div>
 
     <div id="term-container">
 
-        <div id="phrase-container" class="main-container" align="center">
-
-            <p class="input-title">Prepended phrase</p>
-            <input id="prepend" type="text">
-
-            <p class="input-title">Appended phrase</p>
-            <input id="append" type="text">
-
-        </div>
-
         <div id="command-container" class="main-container" align="center">
 
-            <button id="import-open">Import</button>
-            <button id="clear">Clear</button>
-
+            <button title="Import" id="import-open" class="command"><img src="resources/images/import.png" height="27px" width=27px" class="button-image"></button>
+            <button title="Clear" id="clear" class="command"><img src="resources/images/clear.png" height="30px" width="30px" class="button-image"></button>
+            <button title="Start" id="start" class="command"><img src="resources/images/start.png" height="30px" width="30px" class="button-image"></button>
         </div>
 
-        <div id="search-container" align="center">
-        </div>
+        <div id="search-container" align="center"></div>
 
-        <div id="term-command-container" class="main-container" align="center">
-
-            <button id="add">+</button>
-            <button id="remove">-</button>
-
-        </div>
+        <div id="add-term" class="search-container" align="center">+ Add Term</div>
 
     </div>
 

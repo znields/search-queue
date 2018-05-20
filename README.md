@@ -77,29 +77,21 @@ The 'Help' button navigates to the Search Queue repository.
 
 The queue editor automatically opens after Queue Search has been installed. It can also be accessed by first clicking on the Queue Search icon in the toolbar and then on 'Edit Queue'. The queue editor's primary purpose is to allow for the addition or removal of searches from the queue. The following is a functional description of each of the input fields and buttons on the editor page:
 
-#### Prepended Phrase
-
-The prepended phrase is added to the beginning of every search made by SearchQueue. For example, if the prepended phrase is set to "Apple" and the first search term is set to "iPhone" when the first search is made, results for the phrase "Apple iPhone" will be displayed.
-
-#### Appended Phrase
-
-The 'Appended phrase' is added to the end of every search made by SearchQueue. For example, if the appended phrase is set to "stock price" and the first search term is set to "Apple" when the first search is made, results for the phrase "Apple stock price" will be displayed.
-
-#### Import
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/import.png" width="16"> Import
 
 The 'Import' button is used to display a popup which allows for searches to be quickly imported. The searches should be entered into the text box separated by new lines.
 
-#### Clear
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/clear.png" width="16"> Clear
 
 The 'Clear' button is used to clear all entered searches and the appended and prepended phrases.
 
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/delete.png" width="16"> Delete
+
+Once a search has been added, it can be deleted by hovering over the search number and clicking on the delete button.
+
 #### + Add Search
 
-The '+' button adds a new search to the queue.
-
-#### - Remove Search
-
-The '-' button removes the last search from the queue.
+The '+ Add Search' button adds a new search to the queue.
 
 ## Use Cases
 

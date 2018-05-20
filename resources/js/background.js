@@ -26,13 +26,13 @@ function notify(message)
 }
 
 // searches google for a given appended phrase, search term, and prepended phrase
-function search(search, prepend, append)
+function search(search)
 {
     // creates a constant for the google search
     const google = "https://www.google.com/search?q=";
 
     // updates the current tab to load the google search
-    chrome.tabs.update({"url": google + prepend + "+" + search + "+" + append});
+    chrome.tabs.update({"url": google + search});
 }
 
 // searches the next term in the search queue
@@ -43,7 +43,7 @@ function next()
     {
 
         // if the index value is at the last value in the queue
-        if (items["index"] + 1 >= items["searchCount"])
+        if (items["index"] >= items["search-count"])
         {
             // alert the user that they are at the end of the queue
             notify("You have reached the end of your queue!")
@@ -51,7 +51,7 @@ function next()
         else
         {
             // search the next search term with google search
-            search(items["search" + (items["index"] + 1)], items["prepend"], items["append"]);
+            search(items["search" + (items["index"] + 1)]);
 
             // increment the index value by 1
             chrome.storage.local.set({"index": items["index"] + 1});
@@ -66,14 +66,14 @@ function previous()
     chrome.storage.local.get(null, function (items)
     {
         // if index is less than or equal to zero
-        if (items["index"] <= 0)
+        if (items["index"] <= 1)
         {
             // alert the user that they are at the beginning of the queue
             notify("You are already at the beginning of your queue!")
         }
         else {
             // search the previous search term with google search
-            search(items["search" + (items["index"] - 1)], items["prepend"], items["append"]);
+            search(items["search" + (items["index"] - 1)]);
 
             // decrement the index value by 1
             chrome.storage.local.set({"index": items["index"] - 1});
