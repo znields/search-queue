@@ -4,18 +4,59 @@ body {
 
 input[type=text] {
     padding: 5px 5px;
-    width: 100%;
+    width: 220px;
 }
 
 .main-container {
     padding: 10px 0px;
 }
 
-.input-title {
-    width: 100%;
-    text-align: left;
-    padding: 10px 0px;
-    margin: 0px;
+.delete-term-button {
+    text-align: center;
+    padding: 0px 0px;
+    margin: 0px 10px 0px 0px;
+    border: none;
+    height: 20px;
+    width: 20px;
+}
+
+.delete-term-button:hover {
+    background-image: url("/resources/images/delete.png");
+    background-size: 20px 20px;
+    text-indent: -99999px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.search-container {
+    outline: 1px solid gray;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.dragged-over {
+    border-top: 1px solid blue;
+}
+
+.command {
+    margin: 5px 5px;
+    padding: 0px 0px;
+    height: 35px;
+    width: 35px;
+    border: 1px solid gray;
+    border-radius: 40px;
+}
+
+.command:hover {
+    background: #F4F4F4;
+}
+
+.button-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #term-container {
@@ -32,11 +73,24 @@ input[type=text] {
     text-align: center;
 }
 
+#command-container {
+    margin: 10px 0px 0px 0px;
+    padding: 0px 0px;
+}
+
 #header {
     font-weight: bold;
     text-align: center;
-    background: whitesmoke;
-    border: 1px solid lightgray;
+    background: #F4F4F4;
+    border: 1px solid #CACACA;
     padding: 10px 10px;
     margin: 0px 0px;
+}
+
+#import-save {
+    margin: 5px 5px;
+}
+
+#add-term:hover {
+    background: #F4F4F4;
 }
