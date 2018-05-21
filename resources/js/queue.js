@@ -1,5 +1,58 @@
 /* queue.js contains all of the functions that are solely used on the queue.html page. */
 
+// restores the queue editor page on load
+function restore()
+{
+    // retrieves all items from storage and passes them into function
+    chrome.storage.local.get(null, function (items)
+    {
+        // set the number of searches to be zero
+        chrome.storage.local.set({'search-count': 0});
+
+        // if the index variable is undefined
+        if (items['index'] === undefined)
+        {
+            // set the index variables to be zero
+            chrome.storage.local.set({'index': 1});
+        }
+
+        // while there is another term to be loaded from storage
+        let i = 1;
+        while (items['search' + i] !== undefined) {
+
+            // adds the term to queue.html
+            add(items['search' + i], i);
+
+            // increments i by 1
+            i += 1;
+        }
+
+        // updates the search-count to the number of searches
+        chrome.storage.local.set({'search-count' : i - 1});
+    });
+}
+
+// saves the prepended and appended phrases, as well as all terms
+function save()
+{
+    // retrieves the user entered search terms from queue.html
+    const searches = document.getElementsByClassName('search-term');
+
+    // adds prepend, append, and search-count to the packet for saving
+    const packet = {};
+    packet['search-count'] = searches.length;
+
+    // iterates over the search terms
+    for (let i = 0; i < searches.length; i++)
+    {
+        // adds each search term to the packet
+        packet['search' + (i+ 1)] =  searches[i].value;
+    }
+
+    // saves the packet to storage
+    chrome.storage.local.set(packet);
+}
+
 // displays the import page which allows the user to import multiple terms
 function openImport()
 {
@@ -48,27 +101,6 @@ function cancelImport()
     document.getElementById('import-text').value = "";
 }
 
-// saves the prepended and appended phrases, as well as all terms
-function save()
-{
-    // retrieves the user entered search terms from queue.html
-    const searches = document.getElementsByClassName('search-term');
-
-    // adds prepend, append, and search-count to the packet for saving
-    const packet = {};
-    packet['search-count'] = searches.length;
-
-    // iterates over the search terms
-    for (let i = 0; i < searches.length; i++)
-    {
-        // adds each search term to the packet
-        packet['search' + (i+ 1)] =  searches[i].value;
-    }
-
-    // saves the packet to storage
-    chrome.storage.local.set(packet);
-}
-
 // clears all queued search terms
 function clear()
 {
@@ -87,6 +119,43 @@ function clear()
 
     // resets search count and index values in storage
     chrome.storage.local.set({'search-count': 0, 'index': 1});
+}
+
+// creates a Google search for the current search term
+function start()
+{
+    // retrieves all items from storage
+    chrome.storage.local.get(null, function (items) {
+
+        // if the number of search terms is not zero
+        if (items['search-count'] !== 0)
+        {
+            // search the term at the current index
+            search(items['search' + items['index']]);
+        }
+        else
+        {
+            // alert the user that they have no searches in the queue
+            notify("You have no items in the queue!")
+        }
+    });
+}
+
+// displays the settings page
+function openSettings()
+{
+    // makes the the settings container visible to the user
+    document.getElementById('settings-container').style.display = 'block';
+}
+
+// saves the settings that the user entered
+function saveSettings() {
+
+}
+
+// cancels the changes made to the settings
+function cancelSettings() {
+    
 }
 
 // removes the term at the ith index from the search queue
@@ -172,72 +241,6 @@ function add(term, i)
     });
 }
 
-// restores the queue editor page on load
-function restore()
-{
-    // retrieves all items from storage and passes them into function
-    chrome.storage.local.get(null, function (items)
-    {
-        // set the number of searches to be zero
-        chrome.storage.local.set({'search-count': 0});
-
-        // if the index variable is undefined
-        if (items['index'] === undefined)
-        {
-            // set the index variables to be zero
-            chrome.storage.local.set({'index': 1});
-        }
-
-        // while there is another term to be loaded from storage
-        let i = 1;
-        while (items['search' + i] !== undefined) {
-
-            // adds the term to queue.html
-            add(items['search' + i], i);
-
-            // increments i by 1
-            i += 1;
-        }
-
-        // updates the search-count to the number of searches
-        chrome.storage.local.set({'search-count' : i - 1});
-    });
-}
-
-// adjusts the term numbers to be in order
-function adjustTermNumbers()
-{
-    // retrieve all delete buttons
-    const deleteTermButtons = document.getElementsByClassName('delete-term-button');
-
-    // iterate over all of the delete buttons
-    for (let i = 0; i < deleteTermButtons.length; i++)
-    {
-        // change the inner text to match the ordering of the buttons
-        deleteTermButtons[i].innerText = i + 1;
-    }
-}
-
-// creates a Google search for the current search term
-function start()
-{
-    // retrieves all items from storage
-    chrome.storage.local.get(null, function (items) {
-
-        // if the number of search terms is not zero
-        if (items['search-count'] !== 0)
-        {
-            // search the term at the current index
-            search(items['search' + items['index']]);
-        }
-        else
-        {
-            // alert the user that they have no searches in the queue
-            notify("You have no items in the queue!")
-        }
-    });
-}
-
 // searches the term of interest
 function search(search)
 {
@@ -263,6 +266,20 @@ function notify(message)
     chrome.notifications.create("0", options, function() {});
 }
 
+// adjusts the term numbers to be in order
+function adjustTermNumbers()
+{
+    // retrieve all delete buttons
+    const deleteTermButtons = document.getElementsByClassName('delete-term-button');
+
+    // iterate over all of the delete buttons
+    for (let i = 0; i < deleteTermButtons.length; i++)
+    {
+        // change the inner text to match the ordering of the buttons
+        deleteTermButtons[i].innerText = i + 1;
+    }
+}
+
 // restores queue editor page and links functions to their buttons
 document.addEventListener('DOMContentLoaded', function ()
 {
@@ -274,8 +291,10 @@ document.addEventListener('DOMContentLoaded', function ()
     document.getElementById('import-save').addEventListener('click', saveImport);
     document.getElementById('import-cancel').addEventListener('click', cancelImport);
     document.getElementById('clear').addEventListener('click', clear);
-    document.getElementById('add-term').addEventListener('click', add);
     document.getElementById('start').addEventListener('click', start);
+    document.getElementById('settings').addEventListener('click', openSettings);
+    document.getElementById('add-term').addEventListener('click', add);
+
 });
 
 // saves the queue editor terms before closing
