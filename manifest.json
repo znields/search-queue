@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Search Queue",
-  "version" : "2.0",
+  "version" : "2.1",
   "icons": {"192": "resources/images/icon.png"},
 
   "description" : "A queue for Google search!",
