@@ -38,6 +38,16 @@ function saveImport()
     setTimeout(save, 1000);
 }
 
+// cancels the import that the user selected
+function cancelImport()
+{
+    // makes the import container invisible to the user
+    document.getElementById('import-container').style.display = 'none';
+
+    // resets the import text area to contain no text
+    document.getElementById('import-text').value = "";
+}
+
 // saves the prepended and appended phrases, as well as all terms
 function save()
 {
@@ -262,6 +272,7 @@ document.addEventListener('DOMContentLoaded', function ()
     // links the buttons on the queue editor page to their respective functions
     document.getElementById('import-open').addEventListener('click', openImport);
     document.getElementById('import-save').addEventListener('click', saveImport);
+    document.getElementById('import-cancel').addEventListener('click', cancelImport);
     document.getElementById('clear').addEventListener('click', clear);
     document.getElementById('add-term').addEventListener('click', add);
     document.getElementById('start').addEventListener('click', start);

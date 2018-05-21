@@ -14,18 +14,19 @@
 
         <p>Please enter searches separated by a new line.</p>
         <textarea id="import-text" rows="25" cols="50"></textarea><br>
-        <button id="import-save">Import</button>
+        <button class="import-buttons" id="import-cancel">Cancel</button>
+        <button class="import-buttons" id="import-save">Import</button>
 
     </div>
 
+    <div id="command-container" class="main-container" align="center">
+
+        <button title="Import" id="import-open" class="command"><img src="resources/images/import.png" height="27px" width=27px" class="button-image"></button>
+        <button title="Clear" id="clear" class="command"><img src="resources/images/clear.png" height="30px" width="30px" class="button-image"></button>
+        <button title="Start" id="start" class="command"><img src="resources/images/start.png" height="30px" width="30px" class="button-image"></button>
+    </div>
+
     <div id="term-container">
-
-        <div id="command-container" class="main-container" align="center">
-
-            <button title="Import" id="import-open" class="command"><img src="resources/images/import.png" height="27px" width=27px" class="button-image"></button>
-            <button title="Clear" id="clear" class="command"><img src="resources/images/clear.png" height="30px" width="30px" class="button-image"></button>
-            <button title="Start" id="start" class="command"><img src="resources/images/start.png" height="30px" width="30px" class="button-image"></button>
-        </div>
 
         <div id="search-container" align="center"></div>
 

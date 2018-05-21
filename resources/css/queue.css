@@ -45,7 +45,17 @@ body {
     text-align: center;
 }
 
+.import-buttons {
+    margin: 10px 5px;
+}
+
 #term-container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+#constants-container {
+    display: none;
     width: 300px;
     margin: 0 auto;
 }
