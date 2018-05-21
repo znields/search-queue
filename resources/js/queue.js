@@ -36,7 +36,7 @@ function restore()
 function save()
 {
     // retrieves the user entered search terms from queue.html
-    const searches = document.getElementsByClassName('search-term');
+    const searches = document.getElementsByClassName('search-input');
 
     // adds prepend, append, and search-count to the packet for saving
     const packet = {};
@@ -121,26 +121,6 @@ function clear()
     chrome.storage.local.set({'search-count': 0, 'index': 1});
 }
 
-// creates a Google search for the current search term
-function start()
-{
-    // retrieves all items from storage
-    chrome.storage.local.get(null, function (items) {
-
-        // if the number of search terms is not zero
-        if (items['search-count'] !== 0)
-        {
-            // search the term at the current index
-            search(items['search' + items['index']]);
-        }
-        else
-        {
-            // alert the user that they have no searches in the queue
-            notify("You have no items in the queue!")
-        }
-    });
-}
-
 // displays the settings page
 function openSettings()
 {
@@ -149,12 +129,14 @@ function openSettings()
 }
 
 // saves the settings that the user entered
-function saveSettings() {
+function saveSettings()
+{
 
 }
 
 // cancels the changes made to the settings
-function cancelSettings() {
+function cancelSettings()
+{
     
 }
 
@@ -212,7 +194,7 @@ function add(term, i)
 
         // creates an input term
         const input = document.createElement('input');
-        input.classList.add('search-term');
+        input.classList.add('search-input');
         input.type = 'text';
         input.addEventListener('change', save);
         input.value = typeof term === 'object' ? "" : term;
@@ -239,31 +221,6 @@ function add(term, i)
         save();
 
     });
-}
-
-// searches the term of interest
-function search(search)
-{
-    // creates a constant for the google search
-    const google = "https://www.google.com/search?q=";
-
-    // updates the current tab to load the google search
-    chrome.tabs.update({"url": google + search});
-}
-
-// sends a notification to the user given a certain message
-function notify(message)
-{
-    // sets up the notification options
-    const options = {
-        type: "basic",
-        title: "Search Queue",
-        message: message,
-        iconUrl: "resources/images/icon.png"
-    };
-
-    // alert the user with the notification
-    chrome.notifications.create("0", options, function() {});
 }
 
 // adjusts the term numbers to be in order

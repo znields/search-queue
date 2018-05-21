@@ -5,12 +5,13 @@
     <title>Editor - Search Queue</title>
     <link rel="icon" href="resources/images/icon.png">
     <link rel="stylesheet" href="resources/css/queue.css">
+    <script src="resources/js/background.js"></script>
     <script src="resources/js/queue.js"></script>
 </head>
 <body>
     <h1 id="header"><img src="resources/images/icon.png" width="24">&nbsp; Editor - Search Queue</h1>
 
-    <div id="import-container">
+    <div id="import-container" class="background-container">
 
         <p>Please enter searches separated by a new line.</p>
         <textarea id="import-text" rows="25" cols="50"></textarea><br>
@@ -19,22 +20,29 @@
 
     </div>
 
-    <div id="settings-container">
+    <div id="settings-container" class="background-container">
 
-        Settings Container
+        <div id="constant-container" class="main-container">
+
+            <p>Constant Phrases</p>
+            <input type="text">
+
+            <div id="prepended-constant"><input type="text"></div>
+
+        </div>
 
     </div>
 
-    <div id="command-container" class="main-container" align="center">
+    <div id="command-container" class="main-container">
 
         <button title="Import" id="import-open" class="command"><img src="resources/images/import.png" width=27px" class="button-image"></button>
         <button title="Clear" id="clear" class="command"><img src="resources/images/clear.png" width="30px" class="button-image"></button>
         <button title="Start" id="start" class="command"><img src="resources/images/start.png" width="30px" class="button-image"></button>
-        <button title="Start" id="settings" class="command"><img src="resources/images/settings.png" width="30px" class="button-image"></button>
+        <button title="Settings" id="settings" class="command"><img src="resources/images/settings.png" width="30px" class="button-image"></button>
 
     </div>
 
-    <div id="term-container">
+    <div id="term-container" class="main-container">
 
         <div id="search-container" align="center"></div>
 

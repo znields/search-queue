@@ -2,18 +2,19 @@ body {
     font-family: sans-serif;
 }
 
-#header {
-    font-weight: bold;
+.main-container {
+    width: 300px;
+    margin: 0 auto;
     text-align: center;
-    background: #F4F4F4;
-    border: 1px solid #CACACA;
-    padding: 10px 10px;
-    margin: 0px 0px;
 }
 
-#command-container {
-    margin: 10px 0px 0px 0px;
-    padding: 0px 0px;
+.background-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
 }
 
 .command:hover {
@@ -22,7 +23,7 @@ body {
 
 .command {
     margin: 5px 5px;
-    padding: 0px 0px;
+    padding: 0 0;
     height: 35px;
     width: 35px;
     border: 1px solid gray;
@@ -36,43 +37,14 @@ body {
     margin-right: auto;
 }
 
-#import-container {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    position: fixed;
-    text-align: center;
-}
-
 .import-buttons {
     margin: 10px 5px;
-}
-
-#settings-container {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    position: fixed;
-    text-align: center;
-}
-
-#term-container {
-    width: 300px;
-    margin: 0 auto;
-}
-
-#constants-container {
-    display: none;
-    width: 300px;
-    margin: 0 auto;
 }
 
 .search-container {
     outline: 1px solid gray;
     padding: 10px 10px 10px 10px;
-    margin: 10px 0px;
+    margin: 10px 0;
     height: 30px;
     line-height: 30px;
 }
@@ -81,15 +53,15 @@ body {
     border-top: 1px solid blue;
 }
 
-.search-term {
+.search-input {
     padding: 5px 5px;
     width: 220px;
 }
 
 .delete-term-button {
     text-align: center;
-    padding: 0px 0px;
-    margin: 0px 10px 0px 0px;
+    padding: 0 0;
+    margin: 0 10px 0 0;
     border: none;
     height: 20px;
     width: 20px;
@@ -102,6 +74,15 @@ body {
     text-indent: -99999px;
     white-space: nowrap;
     overflow: hidden;
+}
+
+#header {
+    font-weight: bold;
+    text-align: center;
+    background: #F4F4F4;
+    border: 1px solid #CACACA;
+    padding: 10px 10px;
+    margin: 0 0 5px 0;
 }
 
 #add-term:hover {

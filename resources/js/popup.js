@@ -24,26 +24,6 @@ function viewQueue()
     });
 }
 
-// creates a Google search for the current search term
-function start()
-{
-    // retrieves all items from storage
-    chrome.storage.local.get(null, function (items) {
-
-        // if the number of search terms is not zero
-        if (items['search-count'] !== 0)
-        {
-            // search the term at the current index
-            search(items['search' + items['index']]);
-        }
-        else
-        {
-            // alert the user that they have no searches in the queue
-            notify("You have no items in the queue!")
-        }
-    });
-}
-
 // goes back to the main page of popup.html
 function back()
 {
