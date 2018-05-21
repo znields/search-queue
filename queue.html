@@ -20,19 +20,6 @@
 
     </div>
 
-    <div id="settings-container" class="background-container">
-
-        <div id="constant-container" class="main-container">
-
-            <p>Constant Phrases</p>
-            <input type="text">
-
-            <div id="prepended-constant"><input type="text"></div>
-
-        </div>
-
-    </div>
-
     <div id="command-container" class="main-container">
 
         <button title="Import" id="import-open" class="command"><img src="resources/images/import.png" width=27px" class="button-image"></button>
@@ -42,7 +29,19 @@
 
     </div>
 
+    <div id="constant-container" class="main-container">
+
+        <div class="term-header">Constant Phrases</div>
+
+        <div class="constant-container"><p class="constant-label">Prepend</p><input class="constant-input" id="prepended-constant" type="text"></div>
+        <div class="constant-container"><p class="constant-label">Append</p><input class="constant-input" id="appended-constant" type="text"></div>
+
+    </div>
+
+
     <div id="term-container" class="main-container">
+
+        <div class="term-header">Searches</div>
 
         <div id="search-container" align="center"></div>
 

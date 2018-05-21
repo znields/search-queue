@@ -35,11 +35,19 @@ function restore()
 // saves the prepended and appended phrases, as well as all terms
 function save()
 {
+
+    const packet = {};
+
+    // retrieves the constant phrases from queue.html
+    const constantPhrases = document.getElementsByClassName('constant-input');
+
+    packet['prepended-constant'] = constantPhrases[0].value;
+    packet['appended-constant'] = constantPhrases[1].value;
+
     // retrieves the user entered search terms from queue.html
     const searches = document.getElementsByClassName('search-input');
 
     // adds prepend, append, and search-count to the packet for saving
-    const packet = {};
     packet['search-count'] = searches.length;
 
     // iterates over the search terms
