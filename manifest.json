@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Search Queue",
-  "version" : "2.3",
+  "version" : "2.4",
 
   "description" : "A queue for searching the web!",
   "background": {
