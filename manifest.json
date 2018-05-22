@@ -3,7 +3,7 @@
   "name": "Search Queue",
   "version" : "2.3",
 
-  "description" : "A queue for Google search!",
+  "description" : "A queue for searching the web!",
   "background": {
     "scripts": ["resources/js/background.js"]
   },
