@@ -141,8 +141,8 @@ function saveImport()
     // resets the import text area to contain no text
     document.getElementById('import-text').value = "";
 
-    // waits for 1000 milliseconds, then saves the items that have been imported
-    setTimeout(save, 1000);
+    // waits for 100 milliseconds, then saves the items that have been imported
+    setTimeout(save, 100);
 }
 
 // cancels the import that the user selected
