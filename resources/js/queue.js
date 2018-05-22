@@ -69,6 +69,9 @@ function restore()
         chrome.storage.local.set({'search-count' : i - 1});
     });
 
+    // starts introducing the user to the software
+    introJs().start();
+
 }
 
 // saves the prepended and appended phrases, as well as all terms
