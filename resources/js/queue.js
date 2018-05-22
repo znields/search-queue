@@ -6,22 +6,53 @@ function restore()
     // retrieves all items from storage and passes them into function
     chrome.storage.local.get(null, function (items)
     {
-        // restore the constant prepended and appended values
-        document.getElementById('prepended-constant').value = items['prepended-constant'];
-        document.getElementById('appended-constant').value = items['appended-constant'];
+        const packet = {};
 
-        // restore the search engine selector
-        document.getElementById('search-engine-selector').value = items['search-engine'];
-
-        // set the number of searches to be zero
-        chrome.storage.local.set({'search-count': 0});
-
-        // if the index variable is undefined
+        // if the index has no value
         if (items['index'] === undefined)
         {
-            // set the index variables to be zero
-            chrome.storage.local.set({'index': 1});
+            // set the index variables to be one
+            packet['index'] = 1;
         }
+
+        // if the prepended phrase has no value
+        if (items['prepended-constant'] === undefined)
+        {
+            // set the prepended constant to empty string
+            packet['prepended-constant'] = "";
+        }
+
+        // if the appended phrase has no value
+        if (items['appended-constant'] === undefined)
+        {
+            // set the appended constant to empty string
+            packet['appended-constant'] = "";
+        }
+
+        // if the search engine has no value
+        if (items['search-engine'] === undefined)
+        {
+            // set the search engine to google
+            packet['search-engine'] = 'https://www.google.com/search?q=';
+        }
+
+        // set the number of searches to be zero
+        packet['search-count'] = 0;
+
+        // save the packet to storage
+        chrome.storage.local.set(packet, function ()
+        {
+            // when the packet is done being saved
+            chrome.storage.local.get(['prepended-constant', 'appended-constant', 'search-engine'], function (items)
+            {
+                // restore the constant prepended and appended values
+                document.getElementById('prepended-constant').value = items['prepended-constant'];
+                document.getElementById('appended-constant').value = items['appended-constant'];
+
+                // restore the search engine selector
+                document.getElementById('search-engine-selector').value = items['search-engine'];
+            });
+        });
 
         // while there is another term to be loaded from storage
         let i = 1;
@@ -37,6 +68,7 @@ function restore()
         // updates the search-count to the number of searches
         chrome.storage.local.set({'search-count' : i - 1});
     });
+
 }
 
 // saves the prepended and appended phrases, as well as all terms
