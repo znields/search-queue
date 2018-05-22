@@ -1,5 +1,5 @@
 # <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png" width="24"> Search Queue
-A queue for Google search!
+A queue for searching the web!
 
 [![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
 ![Build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
@@ -79,15 +79,21 @@ The queue editor automatically opens after Queue Search has been installed. It c
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/import.png" width="16"> Import
 
-The 'Import' button is used to display a popup which allows for searches to be quickly imported. The searches should be entered into the text box separated by new lines.
+The import button is used to display a popup which allows for searches to be quickly imported. The searches should be entered into the text box separated by new lines.
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/clear.png" width="16"> Clear
 
-The 'Clear' button is used to clear all entered searches and the appended and prepended phrases.
+The clear button is used to clear all entered searches and the appended and prepended phrases.
+
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/settings.png" width="16"> Settings
+
+The settings button opens up the settings portion of the Queue Editor. On this page, constant phrases can be added and a search engine can be selected.
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/delete.png" width="16"> Delete
 
 Once a search has been added, it can be deleted by hovering over the search number and clicking on the delete button.
+
+
 
 #### + Add Search
 
