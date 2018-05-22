@@ -26,13 +26,26 @@ function notify(message)
 }
 
 // searches google for a given appended phrase, search term, and prepended phrase
-function search(search)
+function search(term)
 {
-    // creates a constant for the google search
-    const google = "https://www.google.com/search?q=";
+    // retrieves the search engine value from storage
+    chrome.storage.local.get(['search-engine', 'appended-constant', 'prepended-constant'], function (items)
+    {
+        // initializes the search variable as the user's engine of choice
+        var search = items['search-engine'];
 
-    // updates the current tab to load the google search
-    chrome.tabs.update({"url": google + search});
+        // if the prepended constant is not null, append it to the search
+        if (items['prepended-constant']) search += items['prepended-constant'] + '+';
+
+        // append the search term to the search
+        search += term;
+
+        // if the appended constant is not null, append it to the search
+        if (items['appended-constant']) search += '+' + items['appended-constant'];
+
+        // updates the current tab to load the search
+        chrome.tabs.update({"url": search});
+    });
 }
 
 // creates a Google search for the current search term

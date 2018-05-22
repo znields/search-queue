@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    margin: 0 0;
 }
 
 .main-container {
@@ -117,4 +118,8 @@ body {
 
 #add-term:hover {
     background: #F4F4F4;
+}
+
+#search-engine-option-container {
+    text-align: center;
 }
