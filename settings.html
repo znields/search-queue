@@ -3,33 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="resources/images/icon.png">
+
+    <link rel="stylesheet" href="resources/css/base.css">
+    <link rel="stylesheet" href="resources/css/header-large.css">
+    <link rel="stylesheet" href="resources/css/header-small.css">
+    <link rel="stylesheet" href="resources/css/container-center.css">
+    <link rel="stylesheet" href="resources/css/container-search.css">
+    <link rel="stylesheet" href="resources/css/input-text.css">
+    <link rel="stylesheet" href="resources/css/button-constant.css">
+    <link rel="stylesheet" href="resources/css/button-small.css">
+
+    <script src="resources/js/settings.js"></script>
+
     <title>Settings - Search Queue</title>
 </head>
 
 <body>
 
-    <h1 id="header">
+    <h1 class="header-large">
 
-        <img src="resources/images/icon.png" width="24">&nbsp;Editor - Search Queue
+        <img src="resources/images/icon.png" width="24">&nbsp;Settings - Search Queue
 
     </h1>
 
-    <div id="settings-container" class="background-container">
+    <div id="settings-container" class="container-center">
 
-        <div id="constant-container" class="main-container">
+        <div id="constant-container">
 
-            <div class="term-header">Constant Phrases</div>
+            <div class="header-small">Constant Phrases</div>
 
-            <div class="constant-container"><p class="constant-label">Prepend</p><input class="constant-input" id="prepended-constant" type="text"></div>
-            <div class="constant-container"><p class="constant-label">Append</p><input class="constant-input" id="appended-constant" type="text"></div>
+            <div id="prepend-container" class="container-search" style="text-align: left">
+
+                <button class="button-constant">Prepend</button>
+                <input id="prepend-constant" class="input-text" type="text">
+
+            </div>
+
+            <div id="append-container" class="container-search" style="text-align: left">
+
+                <button class="button-constant">Append</button>
+                <input id="append-constant" class="input-text" type="text">
+
+            </div>
 
         </div>
 
-        <div id="search-engine-container" class="main-container">
+        <div id="search-engine-container">
 
-            <div class="term-header">Search Engine</div>
+            <div class="header-small">Search Engine</div>
 
-            <div class="constant-container" id="search-engine-option-container">
+            <div class="container-search">
 
                 <select id="search-engine-selector">
 
@@ -47,7 +70,8 @@
 
         </div>
 
-        <button class="import-buttons" id="settings-save">Save</button>
+        <button class="button-small" id="cancel">Cancel</button>
+        <button class="button-small" id="save">Save</button>
 
     </div>
 

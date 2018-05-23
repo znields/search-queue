@@ -1,4 +1,4 @@
-input[type=text] {
+.input-text {
     padding: 5px 5px;
     width: 220px;
 }

@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <title>Import - Search Queue</title>
     <link rel="icon" href="resources/images/icon.png">
+
+    <link rel="stylesheet" href="resources/css/base.css">
+    <link rel="stylesheet" href="resources/css/header-large.css">
+    <link rel="stylesheet" href="resources/css/container-main.css">
+    <link rel="stylesheet" href="resources/css/button-small.css">
+
+    <script src="resources/js/import.js"></script>
+
 </head>
 <body>
 
-    <h1 id="header">
+    <h1 class="header-large">
 
         <img src="resources/images/icon.png" width="24">&nbsp;Editor - Search Queue
 
     </h1>
 
-    <div id="import-container">
+    <div class="container-main">
 
         <p>Please enter searches separated by a new line.</p>
         <textarea id="import-text" rows="25" cols="50"></textarea><br>
-        <button class="import-buttons" id="import-cancel">Cancel</button>
-        <button class="import-buttons" id="import-save">Import</button>
+
+        <button id="cancel" class="button-small">Cancel</button>
+        <button id="import" class="button-small">Import</button>
 
     </div>
 

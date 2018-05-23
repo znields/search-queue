@@ -4,7 +4,7 @@ Functions should be included in this file only if entirely necessary as to impro
 */
 
 // opens the queue page in a new tab
-function openQueue()
+function openEditor()
 {
     // creates a new tab and loads editor.html
     chrome.tabs.create({'url': chrome.extension.getURL('editor.html')});
@@ -135,8 +135,19 @@ function command(string)
 // open the queue editor when the extension is installed
 chrome.runtime.onInstalled.addListener(function ()
 {
-    // opens editor.html
-    openQueue();
+    // initialize the packet that will contain the initial settings
+    let packet = {};
+
+    // set set the initial settings
+    packet['search-engine'] = 'https://www.google.com/search?q=';
+    packet['prepend-constant'] = "";
+    packet['append-constant'] = "";
+    packet['index'] = 1;
+    packet['search-count'] = 0;
+
+    // save the packet to storage and then opens the
+    chrome.storage.local.set(packet, openEditor);
+
 });
 
 // adds a listener for keyboard shortcuts

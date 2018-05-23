@@ -100,6 +100,6 @@ document.addEventListener('DOMContentLoaded', function ()
     document.getElementById('next').addEventListener('click', next);
     document.getElementById('previous').addEventListener('click', previous);
     document.getElementById('view').addEventListener('click', viewQueue);
-    document.getElementById('edit').addEventListener('click', openQueue);
+    document.getElementById('edit').addEventListener('click', openEditor);
     document.getElementById('help').addEventListener('click', openHelp);
 });

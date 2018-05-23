@@ -6,27 +6,6 @@ function restore()
     // retrieves all items from storage and passes them into function
     chrome.storage.local.get(null, function (items)
     {
-        const packet = {};
-
-        // if the index has no value
-        if (items['index'] === undefined)
-        {
-            // set the index variables to be one
-            packet['index'] = 1;
-        }
-
-        // if the search engine has no value
-        if (items['search-engine'] === undefined)
-        {
-            // set the search engine to google
-            packet['search-engine'] = 'https://www.google.com/search?q=';
-        }
-
-        // set the number of searches to be zero
-        packet['search-count'] = 0;
-
-        // save the packet to storage
-        chrome.storage.local.set(packet);
 
         // while there is another term to be loaded from storage
         let i = 1;
@@ -52,7 +31,7 @@ function save()
     const packet = {};
 
     // retrieves the user entered search terms from editor.html
-    const searches = document.getElementsByClassName('search-input');
+    const searches = document.getElementsByClassName('input-text');
 
     // adds prepend, append, and search-count to the packet for saving
     packet['search-count'] = searches.length;
@@ -87,17 +66,24 @@ function clear()
 {
 
     // retrieves main div containing all search divs
-    const searches = document.getElementById('container-search');
+    const searches = document.getElementById('search-container');
+
+    // initialize necessary variables for removing the terms from stroage
+    let i = 1;
+    let packet = [];
 
     // continues until there are no more children in the main search div
     while (searches.firstChild)
     {
         // removes the first search div from the main div
         searches.removeChild(searches.firstChild);
+
+        packet.push('search' + i);
+        i++;
     }
 
     // clears all items from storage
-    chrome.storage.local.clear();
+    chrome.storage.local.remove(packet);
 
     // resets search count and index values in storage
     chrome.storage.local.set({'search-count': 0, 'index': 1});
@@ -154,10 +140,11 @@ function add(term, i)
         deleteButton.id = 'button-delete-' + i;
         deleteButton.innerText = i;
         deleteButton.addEventListener('click', function () {remove(i);});
+        deleteButton.tabIndex = -1;
 
         // creates an input term
         const input = document.createElement('input');
-        input.classList.add('search-input');
+        input.classList.add('input-text');
         input.type = 'text';
         input.addEventListener('change', save);
         input.value = typeof term === 'object' ? "" : term;
@@ -167,7 +154,7 @@ function add(term, i)
         container.appendChild(input);
 
         // appends div to the searches list
-        const searchContainer = document.getElementById('container-search');
+        const searchContainer = document.getElementById('search-container');
         searchContainer.insertBefore(container, searchContainer.children[i - 1]);
 
         if (button_pressed)
@@ -178,10 +165,12 @@ function add(term, i)
             // sets the focus to the most recently added term
             input.focus();
             input.select();
-        }
 
-        // saves the new configuration
-        save();
+            // add an empty search to local storage
+            let packet = {};
+            packet['search' + i] = (term === {}) ? term : "";
+            chrome.storage.local.set(packet);
+        }
 
     });
 }
@@ -217,8 +206,8 @@ document.addEventListener('DOMContentLoaded', function ()
 // saves the queue editor terms before closing
 window.addEventListener('beforeunload', save, false);
 
-/* This portion of editor.js allows the search terms to be rearranged. */
 
+/* This portion of editor.js allows the search terms to be rearranged. */
 
 // initializes a variable that keeps track of which element is being dragged
 let draggedDiv = null;
@@ -287,41 +276,3 @@ function addDragHandlers(elem)
     elem.addEventListener('dragleave', handleDragLeave, false);
 
 }
-
-// function startIntro()
-// {
-//
-//     // starts introducing the user to the software
-//     const intro = introJs();
-//
-//     intro.setOptions({showBullets:false, overlayOpacity:0.1});
-//
-//     document.getElementById('import-open').addEventListener('click', nextStep);
-//
-//     intro.onexit(function () {document.getElementById('import-open').removeEventListener('click', nextStep);});
-//
-//     intro.addSteps([
-//         {
-//             intro: "Welcome to Search Queue! Let's do a quick test drive.",
-//             step: 1
-//         },
-//         {
-//             element: document.getElementById('import-open'),
-//             intro: "Click here to import terms.",
-//             step: 2
-//         },
-//         {
-//             element: document.getElementById('import-text'),
-//             intro: "Enter the searches you would like to make seperated by new lines.",
-//             step: 3
-//         }
-//     ]);
-//
-//     intro.start();
-//
-//
-//     function nextStep() {
-//         intro.nextStep();
-//     }
-//
-// }

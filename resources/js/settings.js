@@ -1,56 +1,61 @@
-// when the packet is done being saved
-chrome.storage.local.get(['prepended-constant', 'appended-constant', 'search-engine'], function (items)
+/* settings.js contains all of the functions that are solely used on the settings.html page. */
+
+// restore the user's previous settings
+function restore()
 {
-    // restore the constant prepended and appended values
-    document.getElementById('prepended-constant').value = items['prepended-constant'];
-    document.getElementById('appended-constant').value = items['appended-constant'];
+    chrome.storage.local.get(['prepend-constant', 'append-constant', 'search-engine'], function (items)
+    {
+        // restore the constant prepended and appended values
+        document.getElementById('prepend-constant').value = items['prepend-constant'];
+        document.getElementById('append-constant').value = items['append-constant'];
 
-    // restore the search engine selector
-    document.getElementById('search-engine-selector').value = items['search-engine'];
-});
+        // restore the search engine selector
+        document.getElementById('search-engine-selector').value = items['search-engine'];
+    });
 
-
-// if the prepended phrase has no value
-if (items['prepended-constant'] === undefined)
-{
-    // set the prepended constant to empty string
-    packet['prepended-constant'] = "";
 }
-
-// if the appended phrase has no value
-if (items['appended-constant'] === undefined)
-{
-    // set the appended constant to empty string
-    packet['appended-constant'] = "";
-}
-
-
-// retrieves the constant phrases from editor.html
-const constantPhrases = document.getElementsByClassName('constant-input');
-
-// adds the prepended and appended phrases to the packaet
-packet['prepended-constant'] = constantPhrases[0].value;
-packet['appended-constant'] = constantPhrases[1].value;
-
-// retrieves the search engine type select
-const searchEngineSelect = document.getElementById('search-engine-selector');
-
-// adds the selected option to the packet to be saved
-packet['search-engine'] = searchEngineSelect.options[searchEngineSelect.selectedIndex].value;
-
-// removes terms from the constant appended and prepended phrases
-document.getElementById('prepended-constant').value = "";
-document.getElementById('appended-constant').value = "";
-
-document.getElementById('settings-save').addEventListener('click', saveSettings);
-
 
 // saves the settings that the user entered
-function saveSettings()
+function save()
 {
-    // makes the the settings container invisible to the user
-    document.getElementById('settings-container').style.display = 'none';
+    // initializes a packet to be saved
+    let packet = {};
 
-    // save the values in all input fields
-    save();
+    // retrieves the search engine type select
+    const searchEngineSelect = document.getElementById('search-engine-selector');
+
+    // retrieves the constant phrases from editor.html
+    const constantPhrases = document.getElementsByClassName('input-text');
+
+    // adds the selected option to the packet to be saved
+    packet['search-engine'] = searchEngineSelect.options[searchEngineSelect.selectedIndex].value;
+
+    // adds the prepended and appended phrases to the packet
+    packet['prepend-constant'] = constantPhrases[0].value;
+    packet['append-constant'] = constantPhrases[1].value;
+
+
+    // save the packet to local storage
+    chrome.storage.local.set(packet, function ()
+    {
+        // navigates the user to import.html
+        chrome.tabs.update({'url': chrome.extension.getURL('editor.html')});
+    });
 }
+
+// don't save the input and return to the editor
+function cancel()
+{
+    chrome.tabs.update({'url': chrome.extension.getURL('editor.html')});
+}
+
+// restores queue editor page and links functions to their buttons
+document.addEventListener('DOMContentLoaded', function ()
+{
+    // restores the page with the user's settings
+    restore();
+
+    // links the buttons on the queue editor page to their respective functions
+    document.getElementById('save').addEventListener('click', save);
+    document.getElementById('cancel').addEventListener('click', cancel);
+});

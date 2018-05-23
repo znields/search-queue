@@ -5,6 +5,7 @@
     <title>Editor - Search Queue</title>
     <link rel="icon" href="resources/images/icon.png">
 
+    <link rel="stylesheet" href="resources/css/base.css">
     <link rel="stylesheet" href="resources/css/header-large.css">
     <link rel="stylesheet" href="resources/css/header-small.css">
     <link rel="stylesheet" href="resources/css/container-center.css">
@@ -20,7 +21,7 @@
     <script src="resources/js/background.js"></script>
 </head>
 <body>
-    <h1 class="header">
+    <h1 class="header-large">
 
         <img src="resources/images/icon.png" width="24">&nbsp;Editor - Search Queue
 
@@ -30,10 +31,21 @@
 
         <div class="container-main">
 
-            <button title="Start" id="start" class="button-circle"><img src="resources/images/start.png" class="button-circle-image"></button>
-            <button title="Clear" id="clear" class="button-circle"><img src="resources/images/clear.png" class="button-circle-image"></button>
-            <button title="Import" id="import-open" class="button-circle"><img src="resources/images/import.png" class="button-circle-image"></button>
-            <button title="Settings" id="settings" class="button-circle"><img src="resources/images/settings.png" class="button-circle-image"></button>
+            <button title="Start" id="start" class="button-circle" tabindex="-1">
+                <img src="resources/images/start.png" class="button-circle-image" draggable="false">
+            </button>
+
+            <button title="Clear" id="clear" class="button-circle" tabindex="-1">
+                <img src="resources/images/clear.png" class="button-circle-image" draggable="false">
+            </button>
+
+            <button title="Import" id="import-open" class="button-circle" tabindex="-1">
+                <img src="resources/images/import.png" class="button-circle-image" draggable="false">
+            </button>
+
+            <button title="Settings" id="settings" class="button-circle" tabindex="-1">
+                <img src="resources/images/settings.png" class="button-circle-image" draggable="false">
+            </button>
 
         </div>
 
@@ -42,9 +54,9 @@
 
             <div id="searches-header" class="header-small">Searches</div>
 
-            <div id="container-search"></div>
+            <div id="search-container"></div>
 
-            <div id="add-term" class="button-large">+ Add Search</div>
+            <button id="add-term" class="button-large">+ Add Search</button>
 
         </div>
 
