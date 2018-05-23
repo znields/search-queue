@@ -85,7 +85,7 @@ function restore()
         // for each term in storage
         for (let i = 1; i <= items['search-count']; i++)
         {
-            // restore the term to queue.html
+            // restore the term to editor.html
             add(items['search' + i], i);
         }
     });

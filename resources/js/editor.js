@@ -1,4 +1,4 @@
-/* queue.js contains all of the functions that are solely used on the queue.html page. */
+/* editor.js contains all of the functions that are solely used on the editor.html page. */
 
 // restores the queue editor page on load
 function restore()
@@ -15,20 +15,6 @@ function restore()
             packet['index'] = 1;
         }
 
-        // if the prepended phrase has no value
-        if (items['prepended-constant'] === undefined)
-        {
-            // set the prepended constant to empty string
-            packet['prepended-constant'] = "";
-        }
-
-        // if the appended phrase has no value
-        if (items['appended-constant'] === undefined)
-        {
-            // set the appended constant to empty string
-            packet['appended-constant'] = "";
-        }
-
         // if the search engine has no value
         if (items['search-engine'] === undefined)
         {
@@ -40,25 +26,13 @@ function restore()
         packet['search-count'] = 0;
 
         // save the packet to storage
-        chrome.storage.local.set(packet, function ()
-        {
-            // when the packet is done being saved
-            chrome.storage.local.get(['prepended-constant', 'appended-constant', 'search-engine'], function (items)
-            {
-                // restore the constant prepended and appended values
-                document.getElementById('prepended-constant').value = items['prepended-constant'];
-                document.getElementById('appended-constant').value = items['appended-constant'];
-
-                // restore the search engine selector
-                document.getElementById('search-engine-selector').value = items['search-engine'];
-            });
-        });
+        chrome.storage.local.set(packet);
 
         // while there is another term to be loaded from storage
         let i = 1;
         while (items['search' + i] !== undefined) {
 
-            // adds the term to queue.html
+            // adds the term to editor.html
             add(items['search' + i], i);
 
             // increments i by 1
@@ -69,9 +43,6 @@ function restore()
         chrome.storage.local.set({'search-count' : i - 1});
     });
 
-    // starts introducing the user to the software
-    introJs().start();
-
 }
 
 // saves the prepended and appended phrases, as well as all terms
@@ -80,20 +51,7 @@ function save()
 
     const packet = {};
 
-    // retrieves the constant phrases from queue.html
-    const constantPhrases = document.getElementsByClassName('constant-input');
-
-    // adds the prepended and appended phrases to the packaet
-    packet['prepended-constant'] = constantPhrases[0].value;
-    packet['appended-constant'] = constantPhrases[1].value;
-
-    // retrieves the search engine type select
-    const searchEngineSelect = document.getElementById('search-engine-selector');
-
-    // adds the selected option to the packet to be saved
-    packet['search-engine'] = searchEngineSelect.options[searchEngineSelect.selectedIndex].value;
-
-    // retrieves the user entered search terms from queue.html
+    // retrieves the user entered search terms from editor.html
     const searches = document.getElementsByClassName('search-input');
 
     // adds prepend, append, and search-count to the packet for saving
@@ -110,63 +68,26 @@ function save()
     chrome.storage.local.set(packet);
 }
 
-// displays the import page which allows the user to import multiple terms
+// navigates to the import page
 function openImport()
 {
-    // makes the the import container visible to the user
-    document.getElementById('import-container').style.display = 'block';
+    // navigates the user to import.html
+    chrome.tabs.update({'url': chrome.extension.getURL('import.html')});
 }
 
-// processes and saves the terms entered on the import page
-function saveImport()
+// navigates to the settings page
+function openSettings()
 {
-    // makes the import container invisible to the user
-    document.getElementById('import-container').style.display = 'none';
-
-    // splits up the import text by line
-    const searches = document.getElementById('import-text').value.split('\n');
-
-    // retrieves the number of searches and passes into function
-    chrome.storage.local.get('search-count', function (items)
-    {
-        // iterates over the search
-        for (let i = 0; i < searches.length; i++)
-        {
-            // adds each search to the search queue
-            add(searches[i], i + 1 + items['search-count']);
-        }
-
-        // increments the search count by the number of terms added
-        chrome.storage.local.set({'search-count': items['search-count'] + searches.length});
-    });
-
-
-    // resets the import text area to contain no text
-    document.getElementById('import-text').value = "";
-
-    // waits for 100 milliseconds, then saves the items that have been imported
-    setTimeout(save, 100);
-}
-
-// cancels the import that the user selected
-function cancelImport()
-{
-    // makes the import container invisible to the user
-    document.getElementById('import-container').style.display = 'none';
-
-    // resets the import text area to contain no text
-    document.getElementById('import-text').value = "";
+    // makes the the settings container visible to the user
+    chrome.tabs.update({'url': chrome.extension.getURL('settings.html')});
 }
 
 // clears all queued search terms
 function clear()
 {
-    // removes terms from the constant appended and prepended phrases
-    document.getElementById('prepended-constant').value = "";
-    document.getElementById('appended-constant').value = "";
 
     // retrieves main div containing all search divs
-    const searches = document.getElementById('search-container');
+    const searches = document.getElementById('container-search');
 
     // continues until there are no more children in the main search div
     while (searches.firstChild)
@@ -182,31 +103,14 @@ function clear()
     chrome.storage.local.set({'search-count': 0, 'index': 1});
 }
 
-// displays the settings page
-function openSettings()
-{
-    // makes the the settings container visible to the user
-    document.getElementById('settings-container').style.display = 'block';
-}
-
-// saves the settings that the user entered
-function saveSettings()
-{
-    // makes the the settings container invisible to the user
-    document.getElementById('settings-container').style.display = 'none';
-
-    // save the values in all input fields
-    save();
-}
-
 // removes the term at the ith index from the search queue
 function remove(i)
 {
-    // retrieves all term divs from queue.html
-    const searchContainers = document.getElementsByClassName('search-container');
+    // retrieves all term divs from editor.html
+    const searchContainers = document.getElementsByClassName('container-search');
 
     // removes the last search term from the list of terms
-    searchContainers[0].parentNode.removeChild(document.getElementById('search-container-' + i));
+    searchContainers[0].parentNode.removeChild(document.getElementById('container-search-' + i));
 
     // retrieves the number of searches and the search term variable from storage
     chrome.storage.local.get('search-count', function (items)
@@ -239,15 +143,15 @@ function add(term, i)
 
         // creates a div to contain search term and number
         const container = document.createElement('div');
-        container.classList.add('search-container');
-        container.id = 'search-container-' + i;
+        container.classList.add('container-search');
+        container.id = 'container-search-' + i;
         container.draggable = true;
         addDragHandlers(container);
 
         // create delete button
         const deleteButton = document.createElement('button');
-        deleteButton.classList.add('delete-term-button');
-        deleteButton.id = 'delete-term-button-' + i;
+        deleteButton.classList.add('button-delete');
+        deleteButton.id = 'button-delete-' + i;
         deleteButton.innerText = i;
         deleteButton.addEventListener('click', function () {remove(i);});
 
@@ -263,7 +167,7 @@ function add(term, i)
         container.appendChild(input);
 
         // appends div to the searches list
-        const searchContainer = document.getElementById('search-container');
+        const searchContainer = document.getElementById('container-search');
         searchContainer.insertBefore(container, searchContainer.children[i - 1]);
 
         if (button_pressed)
@@ -286,7 +190,7 @@ function add(term, i)
 function adjustTermNumbers()
 {
     // retrieve all delete buttons
-    const deleteTermButtons = document.getElementsByClassName('delete-term-button');
+    const deleteTermButtons = document.getElementsByClassName('button-delete');
 
     // iterate over all of the delete buttons
     for (let i = 0; i < deleteTermButtons.length; i++)
@@ -303,23 +207,21 @@ document.addEventListener('DOMContentLoaded', function ()
     restore();
 
     // links the buttons on the queue editor page to their respective functions
-    document.getElementById('import-open').addEventListener('click', openImport);
-    document.getElementById('import-save').addEventListener('click', saveImport);
-    document.getElementById('import-cancel').addEventListener('click', cancelImport);
-    document.getElementById('clear').addEventListener('click', clear);
     document.getElementById('start').addEventListener('click', start);
+    document.getElementById('clear').addEventListener('click', clear);
+    document.getElementById('import-open').addEventListener('click', openImport);
     document.getElementById('settings').addEventListener('click', openSettings);
-    document.getElementById('settings-save').addEventListener('click', saveSettings);
     document.getElementById('add-term').addEventListener('click', add);
 });
 
 // saves the queue editor terms before closing
 window.addEventListener('beforeunload', save, false);
 
-/* This portion of queue.js allows the search terms to be rearranged. */
+/* This portion of editor.js allows the search terms to be rearranged. */
+
 
 // initializes a variable that keeps track of which element is being dragged
-var draggedDiv = null;
+let draggedDiv = null;
 
 // runs when a div is picked up
 function handleDragStart(e)
@@ -351,14 +253,14 @@ function handleDragOver(e)
 }
 
 // runs when the user drags an element away
-function handleDragLeave(e)
+function handleDragLeave()
 {
     // marks the element as no longer being dragged over
     this.classList.remove('dragged-over');
 }
 
 // runs when an element is dropped
-function handleDrop(e)
+function handleDrop()
 {
     // if the element is dropped in a different area
     if (draggedDiv !== this)
@@ -385,3 +287,41 @@ function addDragHandlers(elem)
     elem.addEventListener('dragleave', handleDragLeave, false);
 
 }
+
+// function startIntro()
+// {
+//
+//     // starts introducing the user to the software
+//     const intro = introJs();
+//
+//     intro.setOptions({showBullets:false, overlayOpacity:0.1});
+//
+//     document.getElementById('import-open').addEventListener('click', nextStep);
+//
+//     intro.onexit(function () {document.getElementById('import-open').removeEventListener('click', nextStep);});
+//
+//     intro.addSteps([
+//         {
+//             intro: "Welcome to Search Queue! Let's do a quick test drive.",
+//             step: 1
+//         },
+//         {
+//             element: document.getElementById('import-open'),
+//             intro: "Click here to import terms.",
+//             step: 2
+//         },
+//         {
+//             element: document.getElementById('import-text'),
+//             intro: "Enter the searches you would like to make seperated by new lines.",
+//             step: 3
+//         }
+//     ]);
+//
+//     intro.start();
+//
+//
+//     function nextStep() {
+//         intro.nextStep();
+//     }
+//
+// }

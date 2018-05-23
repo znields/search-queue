@@ -6,8 +6,8 @@ Functions should be included in this file only if entirely necessary as to impro
 // opens the queue page in a new tab
 function openQueue()
 {
-    // creates a new tab and loads queue.html
-    chrome.tabs.update({'url': chrome.extension.getURL('queue.html')});
+    // creates a new tab and loads editor.html
+    chrome.tabs.create({'url': chrome.extension.getURL('editor.html')});
 }
 
 // sends a notification to the user given a certain message
@@ -135,11 +135,8 @@ function command(string)
 // open the queue editor when the extension is installed
 chrome.runtime.onInstalled.addListener(function ()
 {
-    // opens queue.html
+    // opens editor.html
     openQueue();
-
-    // starts introducing the user to the software
-    introJs().start();
 });
 
 // adds a listener for keyboard shortcuts
