@@ -31,19 +31,19 @@ function notify(message)
 function search(term)
 {
     // retrieves the search engine value from storage
-    chrome.storage.local.get(['search-engine', 'appended-constant', 'prepended-constant'], function (items)
+    chrome.storage.local.get(['search-engine', 'append-constant', 'prepend-constant'], function (items)
     {
         // initializes the search variable as the user's engine of choice
         var search = items['search-engine'];
 
         // if the prepended constant is not null, append it to the search
-        if (items['prepended-constant']) search += items['prepended-constant'] + '+';
+        if (items['prepend-constant']) search += items['prepend-constant'] + '+';
 
         // append the search term to the search
         search += term;
 
         // if the appended constant is not null, append it to the search
-        if (items['appended-constant']) search += '+' + items['appended-constant'];
+        if (items['append-constant']) search += '+' + items['append-constant'];
 
         // updates the current tab to load the search
         chrome.tabs.update({"url": search});
@@ -146,6 +146,7 @@ chrome.runtime.onInstalled.addListener(function ()
     packet['append-constant'] = "";
     packet['index'] = 1;
     packet['search-count'] = 0;
+    packet['fresh-install'] = 1;
 
     // save the packet to storage and then opens the
     chrome.storage.local.set(packet, openEditor);

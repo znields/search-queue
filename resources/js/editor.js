@@ -199,8 +199,29 @@ document.addEventListener('DOMContentLoaded', function ()
     document.getElementById('start').addEventListener('click', start);
     document.getElementById('clear').addEventListener('click', clear);
     document.getElementById('import-open').addEventListener('click', openImport);
-    document.getElementById('settings').addEventListener('click', openSettings);
-    document.getElementById('add-term').addEventListener('click', add);
+    document.getElementById('settings-open').addEventListener('click', openSettings);
+    document.getElementById('add-search').addEventListener('click', add);
+
+    // if the introduction step is 1, begin the introduction
+    chrome.storage.local.get('intro-step', function (items) {
+
+        switch (items['intro-step'])
+        {
+            case -1:
+                break;
+            case 1:
+                intro1();
+                break;
+            case 3:
+                intro3();
+                break;
+            case 5:
+                intro5();
+                break;
+            default:
+                chrome.storage.local.set({'intro-step': -1});
+        }
+    });
 });
 
 // saves the queue editor terms before closing
@@ -275,4 +296,88 @@ function addDragHandlers(elem)
     elem.addEventListener('drop', handleDrop, false);
     elem.addEventListener('dragleave', handleDragLeave, false);
 
+}
+
+function intro1()
+{
+    add("");
+    let intro = introJs();
+    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false});
+    intro.onexit(function () {chrome.tabs.getSelected(null, function(tab) {chrome.tabs.reload(tab.id);});});
+    window.setTimeout(function ()
+    {
+        intro.addSteps([
+            {
+                intro: "Welcome to Search Queue! Let's give it a test drive.",
+                step: 1
+            },
+            {
+                element: document.getElementsByClassName('input-text')[0],
+                intro: "Enter a search that you would like to make.",
+                step: 2
+            },
+            {
+                element: document.getElementById('import-open'),
+                intro: "Click here to import searches.",
+                step: 3
+            }
+        ]);
+
+        intro.start();
+
+    }, 200);
+    chrome.storage.local.set({'intro-step': 2});
+}
+
+function intro3()
+{
+    let intro = introJs();
+    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false});
+    intro.onexit(function () {chrome.tabs.getSelected(null, function(tab) {chrome.tabs.reload(tab.id);});});
+    window.setTimeout(function () {
+
+        intro.addSteps([
+            {
+                element: document.getElementById('search-container'),
+                intro: "Your searches have been imported. Drag and drop to reorder them!",
+                step: 6
+            }
+            , {
+                element: document.getElementById('settings-open'),
+                intro: "Click here to open settings.",
+                step: 7
+            }
+        ]);
+
+        intro.start();
+
+    }, 200);
+    chrome.storage.local.set({'intro-step': 4});
+}
+
+function intro5()
+{
+    let intro = introJs();
+    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false});
+    intro.onexit(function () {chrome.tabs.getSelected(null, function(tab) {chrome.tabs.reload(tab.id);});});
+    window.setTimeout(function () {
+
+        intro.addSteps([
+            {
+                element: document.getElementById('clear'),
+                intro: "To clear all searches, click this button. It's blocked right now!",
+                disableInteraction: true,
+                step: 10
+            }
+            ,{
+                element: document.getElementById('start'),
+                intro: "You're all set! Click the start button to make your first search.",
+                step: 11
+            }
+        ]);
+
+        intro.start();
+
+    }, 200);
+    chrome.storage.local.set({'intro-step': -1});
 }

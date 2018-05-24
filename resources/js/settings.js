@@ -49,6 +49,11 @@ function cancel()
     chrome.tabs.update({'url': chrome.extension.getURL('editor.html')});
 }
 
+function resetIntro()
+{
+    chrome.storage.local.set({'intro-step': 1}, save);
+}
+
 // restores queue editor page and links functions to their buttons
 document.addEventListener('DOMContentLoaded', function ()
 {
@@ -58,4 +63,51 @@ document.addEventListener('DOMContentLoaded', function ()
     // links the buttons on the queue editor page to their respective functions
     document.getElementById('save').addEventListener('click', save);
     document.getElementById('cancel').addEventListener('click', cancel);
+    document.getElementById('reset-intro').addEventListener('click', resetIntro);
+
+    // if the intro step is 4, run the settings intro
+    chrome.storage.local.get('intro-step', function(items) {
+        if (items['intro-step'] === 4)
+        {
+            intro4();
+        }
+        else
+        {
+            chrome.storage.local.set({'intro-step': -1});
+        }
+    });
 });
+
+// the fourth step of the introduction
+function intro4()
+{
+    let intro = introJs();
+    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false});
+    intro.onexit(function () {chrome.tabs.getSelected(null, function(tab) {chrome.tabs.reload(tab.id);});});
+    window.setTimeout(function () {
+        intro.addSteps([
+            {
+                element: document.getElementById('prepend-constant'),
+                intro: "Enter a prepended constant. This phrase will be added to beginning of each search.",
+                step: 8
+            },
+            {
+                element: document.getElementById('append-constant'),
+                intro: "Enter an appended constant. This phrase will be added to the end of each search.",
+                step: 9
+            },
+            {
+                element: document.getElementById('search-engine-container'),
+                intro: "Select the search engine you would like to use.",
+                step: 10
+            },
+            {
+                element: document.getElementById('save'),
+                intro: "Click save.",
+                step: 11
+            }
+        ]);
+        intro.start();
+    }, 200);
+    chrome.storage.local.set({'intro-step': 5});
+}

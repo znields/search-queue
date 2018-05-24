@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="resources/css/container-center.css">
     <link rel="stylesheet" href="resources/css/container-search.css">
     <link rel="stylesheet" href="resources/css/container-main.css">
+    <link rel="stylesheet" href="resources/css/container-constant.css">
     <link rel="stylesheet" href="resources/css/input-text.css">
-    <link rel="stylesheet" href="resources/css/button-constant.css">
     <link rel="stylesheet" href="resources/css/button-small.css">
+    <link rel="stylesheet" href="resources/css/introjs.css">
 
     <script src="resources/js/settings.js"></script>
+    <script src="resources/js/intro.js"></script>
 
     <title>Settings - Search Queue</title>
 
@@ -36,25 +38,25 @@
 
             <div id="prepend-container" class="container-search" style="text-align: left">
 
-                <button class="button-constant">Prepend</button>
+                <span class="container-constant">Prepend</span>
                 <input id="prepend-constant" class="input-text" type="text">
 
             </div>
 
             <div id="append-container" class="container-search" style="text-align: left">
 
-                <button class="button-constant">Append</button>
+                <span class="container-constant">Append</span>
                 <input id="append-constant" class="input-text" type="text">
 
             </div>
 
         </div>
 
-        <div id="search-engine-container" class="container-main">
+        <div class="container-main">
 
             <div class="header-small">Search Engine</div>
 
-            <div class="container-search">
+            <div id="search-engine-container" class="container-search">
 
                 <select id="search-engine-selector">
 
@@ -67,6 +69,18 @@
                     <option value="https://www.youtube.com/results?search_query=">YouTube</option>
 
                 </select>
+
+            </div>
+
+        </div>
+
+        <div id="intro-container" class="container-main">
+
+            <div class="header-small">Introduction</div>
+
+            <div id="reset-intro-container" class="container-search">
+
+                <button id="reset-intro" class="button-small">Reset</button>
 
             </div>
 

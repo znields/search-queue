@@ -42,4 +42,41 @@ document.addEventListener('DOMContentLoaded', function ()
     // links the buttons on the queue editor page to their respective functions
     document.getElementById('import').addEventListener('click', save);
     document.getElementById('cancel').addEventListener('click', cancel);
+
+    // run the second step of the introduction, if the intro is running
+    chrome.storage.local.get('intro-step', function (items)
+    {
+        if (items['intro-step'] === 2)
+        {
+            intro2();
+        }
+        else
+        {
+            chrome.storage.local.set({'intro-step': -1});
+        }
+    });
 });
+
+function intro2()
+{
+    let intro = introJs();
+    intro.setOptions({overlayOpacity: 0.2, keyboardNavigation: false, showStepNumbers: false, showBullets: false});
+    intro.onexit(function () {chrome.tabs.getSelected(null, function(tab) {chrome.tabs.reload(tab.id);});});
+    window.setTimeout(function ()
+    {
+        intro.addSteps([
+            {
+                element: document.getElementById('import-text'),
+                intro: "Enter a few searches separated by new lines.",
+                step: 4
+            },
+            {
+                element: document.getElementById('import'),
+                intro: "Click import.",
+                step: 5
+            }
+        ]);
+        intro.start();
+    }, 200);
+    chrome.storage.local.set({'intro-step': 3});
+}
