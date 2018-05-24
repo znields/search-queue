@@ -146,7 +146,7 @@ chrome.runtime.onInstalled.addListener(function ()
     packet['append-constant'] = "";
     packet['index'] = 1;
     packet['search-count'] = 0;
-    packet['fresh-install'] = 1;
+    packet['intro-step'] = 1;
 
     // save the packet to storage and then opens the
     chrome.storage.local.set(packet, openEditor);

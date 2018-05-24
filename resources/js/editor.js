@@ -309,6 +309,10 @@ function intro1()
         intro.addSteps([
             {
                 intro: "Welcome to Search Queue! Let's give it a test drive.",
+                step: 0
+            },
+            {
+                intro: "You can always access Search Queue by clicking on the icon in the top right.",
                 step: 1
             },
             {
