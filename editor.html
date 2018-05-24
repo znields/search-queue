@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="resources/css/header-small.css">
     <link rel="stylesheet" href="resources/css/container-center.css">
     <link rel="stylesheet" href="resources/css/container-main.css">
-    <link rel="stylesheet" href="resources/css/container-search.css">
     <link rel="stylesheet" href="resources/css/button-circle.css">
+    <link rel="stylesheet" href="resources/css/button-large.css">
+    <link rel="stylesheet" href="resources/css/container-search.css">
     <link rel="stylesheet" href="resources/css/button-delete.css">
-    <link rel="stylesheet" href="resources/css/button-large.css">
-    <link rel="stylesheet" href="resources/css/button-large.css">
     <link rel="stylesheet" href="resources/css/input-text.css">
     <link rel="stylesheet" href="resources/css/drag.css">
 
@@ -28,9 +27,9 @@
 
     </h1>
 
-    <div class="container-center">
+    <div id="editor-container" class="container-center">
 
-        <div class="container-main">
+        <div id="button-container" class="container-main">
 
             <button title="Start" id="start" class="button-circle" tabindex="-1">
                 <img src="resources/images/start.png" class="button-circle-image" draggable="false">
@@ -51,11 +50,11 @@
         </div>
 
 
-        <div id="term-container" class="container-main">
+        <div id="queue-container" class="container-main">
 
             <div id="searches-header" class="header-small">Searches</div>
 
-            <div id="search-container"></div>
+            <div id="search-container" class="container-main"></div>
 
             <button id="add-term" class="button-large">+ Add Search</button>
 

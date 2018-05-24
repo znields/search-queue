@@ -22,7 +22,9 @@ function notify(message)
     };
 
     // alert the user with the notification
-    chrome.notifications.create("0", options, function() {});
+    chrome.notifications.create("0", options);
+
+    window.setTimeout(function () {chrome.notifications.clear("0");}, 2000);
 }
 
 // searches google for a given appended phrase, search term, and prepended phrase
