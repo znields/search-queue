@@ -504,3 +504,7 @@ tr.introjs-showElement > th {
         opacity: 0.0;
     }
 }
+
+.introjs-skipbutton {
+    display: none;
+}

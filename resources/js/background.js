@@ -135,22 +135,25 @@ function command(string)
 }
 
 // open the queue editor when the extension is installed
-chrome.runtime.onInstalled.addListener(function ()
+chrome.runtime.onInstalled.addListener(function (details)
 {
-    // initialize the packet that will contain the initial settings
-    let packet = {};
+    // if the user just installed the programm
+    if (details.reason === "install")
+    {
+        // initialize the packet that will contain the initial settings
+        let packet = {};
 
-    // set set the initial settings
-    packet['search-engine'] = 'https://www.google.com/search?q=';
-    packet['prepend-constant'] = "";
-    packet['append-constant'] = "";
-    packet['index'] = 1;
-    packet['search-count'] = 0;
-    packet['intro-step'] = 1;
+        // set set the initial settings
+        packet['search-engine'] = 'https://www.google.com/search?q=';
+        packet['prepend-constant'] = "";
+        packet['append-constant'] = "";
+        packet['index'] = 1;
+        packet['search-count'] = 0;
+        packet['intro-step'] = 1;
 
-    // save the packet to storage and then opens the
-    chrome.storage.local.set(packet, openEditor);
-
+        // save the packet to storage and then opens the
+        chrome.storage.local.set(packet, openEditor);
+    }
 });
 
 // adds a listener for keyboard shortcuts

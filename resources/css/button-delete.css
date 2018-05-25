@@ -19,3 +19,11 @@
 .button-delete:focus {
     outline: 0;
 }
+
+.button-delete-hover {
+    background-image: url("/resources/images/delete.png");
+    background-size: 20px 20px;
+    text-indent: -99999px;
+    white-space: nowrap;
+    overflow: hidden;
+}

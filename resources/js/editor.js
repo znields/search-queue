@@ -298,32 +298,39 @@ function addDragHandlers(elem)
 
 }
 
+
+/* This portion of editor.js is for introducing the user to Search Queue. */
+
+// starts the first step of the introduction
 function intro1()
 {
     add("");
     let intro = introJs();
     intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false});
     intro.onexit(function () {chrome.tabs.getSelected(null, function(tab) {chrome.tabs.reload(tab.id);});});
+    intro.onbeforechange(function () {if (this._currentStep === 3) document.getElementById('button-delete-1').classList.add('button-delete-hover');});
+    intro.onafterchange(function () {if (this._currentStep === 4) document.getElementById('button-delete-1').classList.remove('button-delete-hover');});
     window.setTimeout(function ()
     {
         intro.addSteps([
             {
-                intro: "Welcome to Search Queue! Let's give it a test drive.",
-                step: 0
+                intro: "Welcome to Search Queue! Let's give it a test drive."
             },
             {
-                intro: "You can always access Search Queue by clicking on the icon in the top right.",
-                step: 1
+                intro: "You can always access Search Queue by clicking on the icon in the top right."
             },
             {
                 element: document.getElementsByClassName('input-text')[0],
-                intro: "Enter a search that you would like to make.",
-                step: 2
+                intro: "Enter a search that you would like to make."
+            },
+            {
+                element: document.getElementById('button-delete-1'),
+                intro: "If you would like to delete a term, click here. This is disabled for now!",
+                disableInteraction: true
             },
             {
                 element: document.getElementById('import-open'),
-                intro: "Click here to import searches.",
-                step: 3
+                intro: "Click here to import searches."
             }
         ]);
 
@@ -333,6 +340,7 @@ function intro1()
     chrome.storage.local.set({'intro-step': 2});
 }
 
+// starts the third step of the introduction
 function intro3()
 {
     let intro = introJs();
@@ -343,13 +351,11 @@ function intro3()
         intro.addSteps([
             {
                 element: document.getElementById('search-container'),
-                intro: "Your searches have been imported. Drag and drop to reorder them!",
-                step: 6
-            }
-            , {
+                intro: "Your searches have been imported. Drag and drop to reorder them!"
+            },
+            {
                 element: document.getElementById('settings-open'),
-                intro: "Click here to open settings.",
-                step: 7
+                intro: "Click here to open settings."
             }
         ]);
 
@@ -359,6 +365,7 @@ function intro3()
     chrome.storage.local.set({'intro-step': 4});
 }
 
+// starts the last step of the introduction
 function intro5()
 {
     let intro = introJs();
@@ -370,13 +377,11 @@ function intro5()
             {
                 element: document.getElementById('clear'),
                 intro: "To clear all searches, click this button. It's blocked right now!",
-                disableInteraction: true,
-                step: 10
+                disableInteraction: true
             }
             ,{
                 element: document.getElementById('start'),
-                intro: "You're all set! Click the start button to make your first search.",
-                step: 11
+                intro: "You're all set! Click the start button to make your first search."
             }
         ]);
 

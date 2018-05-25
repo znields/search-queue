@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function ()
     // links the buttons on the queue editor page to their respective functions
     document.getElementById('save').addEventListener('click', save);
     document.getElementById('cancel').addEventListener('click', cancel);
-    document.getElementById('reset-intro').addEventListener('click', resetIntro);
+    document.getElementById('restart-introduction').addEventListener('click', resetIntro);
 
     // if the intro step is 4, run the settings intro
     chrome.storage.local.get('intro-step', function(items) {
