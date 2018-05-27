@@ -16,7 +16,7 @@ A queue for searching the web!
 
 ## Purpose
 
-Search Queue adds a queue to Google search! This extension can queue up multiple searches and quickly make them. It was designed with market analysis in mind, however, it has many uses. In general, it's a great tool for anyone who has to make many successive Google searches and would like to speed up the process.
+Search Queue is a queue for searching the web! This extension can queue up multiple searches and quickly make them. It was designed with market analysis in mind, however, it has many uses. In general, it's a great tool for anyone who has to make many successive searches and would like to speed up the process.
 
 ## Compatibility
 
