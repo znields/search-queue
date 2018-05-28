@@ -101,5 +101,6 @@ document.addEventListener('DOMContentLoaded', function ()
     document.getElementById('previous').addEventListener('click', previous);
     document.getElementById('view').addEventListener('click', viewQueue);
     document.getElementById('edit').addEventListener('click', openEditor);
+    document.getElementById('search-all').addEventListener('click', searchAll);
     document.getElementById('help').addEventListener('click', openHelp);
 });

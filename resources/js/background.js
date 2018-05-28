@@ -28,7 +28,7 @@ function notify(message)
 }
 
 // searches google for a given appended phrase, search term, and prepended phrase
-function search(term)
+function search(term, newTab)
 {
     // retrieves the search engine value from storage
     chrome.storage.local.get(['search-engine', 'append-constant', 'prepend-constant'], function (items)
@@ -45,8 +45,25 @@ function search(term)
         // if the appended constant is not null, append it to the search
         if (items['append-constant']) search += '+' + items['append-constant'];
 
-        // updates the current tab to load the search
-        chrome.tabs.update({"url": search});
+        // make the search
+        if (newTab) chrome.tabs.create({"url": search});
+        else chrome.tabs.update({"url": search});
+    });
+}
+
+// searches all the terms in the queue
+function searchAll()
+{
+    chrome.storage.local.get(null, function (items)
+    {
+        // iterates over each search term
+        let i = 1;
+        while (items['search' + i])
+        {
+            // makes the search in a new tab
+            search(items['search' + i], true);
+            i++;
+        }
     });
 }
 
