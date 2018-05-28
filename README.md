@@ -65,7 +65,7 @@ The 'Previous' button searches Google for the previous term in the search queue.
 
 The 'Search All' button searches for every term in the queue in new tabs.
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/view.png" width="16"> View Queue
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/view.png" width="16"> Search All
 
 The 'View Queue' button presents a clickable list of all the search terms in the queue. Upon clicking a term, it is immediately searched.
 
