@@ -13,6 +13,15 @@ function restore()
         document.getElementById('search-engine-selector').value = items['search-engine'];
     });
 
+    // display the keyboard shortcuts
+    chrome.commands.getAll(function (commands) {
+
+        // restore the text of the keyboard shortcuts to their proper containers
+        document.getElementById('next-keyboard-shortcut').innerText = commands[1]['shortcut'];
+        document.getElementById('previous-keyboard-shortcut').innerText = commands[2]['shortcut'];
+
+    });
+
 }
 
 // saves the settings that the user entered
@@ -49,6 +58,12 @@ function cancel()
     chrome.tabs.update({'url': chrome.extension.getURL('editor.html')});
 }
 
+function editShortcuts()
+{
+    // navigates the user to the page to edit shortcuts
+    chrome.tabs.create({'url': 'chrome://extensions/shortcuts'});
+}
+
 function resetIntro()
 {
     chrome.storage.local.set({'intro-step': 1}, save);
@@ -63,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function ()
     // links the buttons on the queue editor page to their respective functions
     document.getElementById('save').addEventListener('click', save);
     document.getElementById('cancel').addEventListener('click', cancel);
+    document.getElementById('edit-keyboard-shortcuts').addEventListener('click', editShortcuts)
     document.getElementById('restart-introduction').addEventListener('click', resetIntro);
 
     // if the intro step is 4, run the settings intro
@@ -82,29 +98,33 @@ document.addEventListener('DOMContentLoaded', function ()
 function intro4()
 {
     let intro = introJs();
-    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false});
+    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false, hideNext: true, hidePrev: true});
     intro.onexit(function () {chrome.tabs.getSelected(null, function(tab) {chrome.tabs.reload(tab.id);});});
     window.setTimeout(function () {
         intro.addSteps([
             {
                 element: document.getElementById('prepend-constant'),
-                intro: "Enter a prepended constant. This phrase will be added to beginning of each search.",
-                step: 8
+                intro: "Enter a prepended constant. This phrase will be added to beginning of every search."
             },
             {
                 element: document.getElementById('append-constant'),
-                intro: "Enter an appended constant. This phrase will be added to the end of each search.",
-                step: 9
+                intro: "Enter an appended constant. This phrase will be added to the end of every search."
             },
             {
                 element: document.getElementById('search-engine-container'),
-                intro: "Select the search engine you would like to use.",
-                step: 10
+                intro: "Select the search engine you would like to use."
+            },
+            {
+                element: document.getElementById('next-keyboard-shortcut-container'),
+                intro: "In order to make the next search in the queue, you can use this keyboard shortcut."
+            },
+            {
+                element: document.getElementById('previous-keyboard-shortcut-container'),
+                intro: "In order to make the previous search in the queue, you can use this keyboard shortcut."
             },
             {
                 element: document.getElementById('save'),
-                intro: "Click save.",
-                step: 11
+                intro: "Click the save button."
             }
         ]);
         intro.start();

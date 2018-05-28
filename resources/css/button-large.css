@@ -7,8 +7,9 @@
     line-height: 50px;
     margin: 0 0;
     padding: 0 0;
+    background-color: #F4F4F4;
 }
 
 .button-large:hover {
-    background: #F4F4F4;
+    background-color: #CACACA;
 }

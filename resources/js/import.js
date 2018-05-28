@@ -60,20 +60,18 @@ document.addEventListener('DOMContentLoaded', function ()
 function intro2()
 {
     let intro = introJs();
-    intro.setOptions({overlayOpacity: 0.2, keyboardNavigation: false, showStepNumbers: false, showBullets: false});
+    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false, keyboardNavigation: false, hideNext: true, hidePrev: true});
     intro.onexit(function () {chrome.tabs.getSelected(null, function(tab) {chrome.tabs.reload(tab.id);});});
     window.setTimeout(function ()
     {
         intro.addSteps([
             {
                 element: document.getElementById('import-text'),
-                intro: "Enter a few searches separated by new lines.",
-                step: 4
+                intro: "Enter a few searches separated by new lines in the text area. You can also copy and paste searches here.",
             },
             {
                 element: document.getElementById('import'),
-                intro: "Click import.",
-                step: 5
+                intro: "Click the import button.",
             }
         ]);
         intro.start();

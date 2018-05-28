@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="resources/css/container-center.css">
     <link rel="stylesheet" href="resources/css/container-search.css">
     <link rel="stylesheet" href="resources/css/container-main.css">
-    <link rel="stylesheet" href="resources/css/container-constant.css">
+    <link rel="stylesheet" href="resources/css/container-inline.css">
     <link rel="stylesheet" href="resources/css/input-text.css">
     <link rel="stylesheet" href="resources/css/button-small.css">
     <link rel="stylesheet" href="resources/css/introjs.css">
@@ -38,14 +38,14 @@
 
             <div id="prepend-container" class="container-search" style="text-align: left">
 
-                <span class="container-constant">Prepend</span>
+                <span class="container-inline">Prepend</span>
                 <input id="prepend-constant" class="input-text" type="text">
 
             </div>
 
             <div id="append-container" class="container-search" style="text-align: left">
 
-                <span class="container-constant">Append</span>
+                <span class="container-inline">Append</span>
                 <input id="append-constant" class="input-text" type="text">
 
             </div>
@@ -71,6 +71,34 @@
                 </select>
 
             </div>
+
+        </div>
+
+        <div id="keyboard-shortcuts-container" class="container-main">
+
+            <div class="header-small">Keyboard Shortcuts</div>
+
+            <div id="next-keyboard-shortcut-container" class="container-search" style="text-align: left">
+
+                <span class="container-inline">Next</span>
+                <span id="next-keyboard-shortcut" class="container-inline container-inline--border"></span>
+
+            </div>
+
+            <div id="previous-keyboard-shortcut-container" class="container-search" style="text-align: left">
+
+                <span class="container-inline">Previous</span>
+                <span id="previous-keyboard-shortcut" class="container-inline container-inline--border"></span>
+
+            </div>
+
+            <div id="edit-keyboard-shortcut-container" class="container-search">
+
+                <button id="edit-keyboard-shortcuts" class="button-small">Edit</button>
+
+            </div>
+
+
 
         </div>
 

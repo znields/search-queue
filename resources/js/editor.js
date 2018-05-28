@@ -306,31 +306,40 @@ function intro1()
 {
     add("");
     let intro = introJs();
-    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false});
+    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false, hideNext: true, hidePrev: true});
     intro.onexit(function () {chrome.tabs.getSelected(null, function(tab) {chrome.tabs.reload(tab.id);});});
-    intro.onbeforechange(function () {if (this._currentStep === 3) document.getElementById('button-delete-1').classList.add('button-delete-hover');});
-    intro.onafterchange(function () {if (this._currentStep === 4) document.getElementById('button-delete-1').classList.remove('button-delete-hover');});
+    intro.onbeforechange(function () {
+        if (this._currentStep === 4) document.getElementById('button-delete-1').classList.add('button-delete-hover');
+        else if (this._currentStep === 3) document.getElementById('button-delete-1').classList.remove('button-delete-hover');
+    });
+    intro.onafterchange(function () {if (this._currentStep === 5) document.getElementById('button-delete-1').classList.remove('button-delete-hover');});
     window.setTimeout(function ()
     {
         intro.addSteps([
             {
-                intro: "Welcome to Search Queue! Let's give it a test drive."
+                intro: "Welcome to Search Queue!"
             },
             {
-                intro: "You can always access Search Queue by clicking on the icon in the top right."
+                intro: "With this extension, you are able to queue up multiple searches and quickly make them."
+            },
+            {
+                intro: "First, let's manually add a search to the queue."
             },
             {
                 element: document.getElementsByClassName('input-text')[0],
-                intro: "Enter a search that you would like to make."
+                intro: "Enter a search you would like to queue up in the text box above."
             },
             {
                 element: document.getElementById('button-delete-1'),
-                intro: "If you would like to delete a term, click here. This is disabled for now!",
+                intro: "If you would like to delete the term, click the trash can button. This is disabled for now!",
                 disableInteraction: true
             },
             {
+                intro: "Next, let's import a list of searches."
+            },
+            {
                 element: document.getElementById('import-open'),
-                intro: "Click here to import searches."
+                intro: "Click the import button."
             }
         ]);
 
@@ -344,18 +353,21 @@ function intro1()
 function intro3()
 {
     let intro = introJs();
-    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false});
+    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false, hideNext: true, hidePrev: true});
     intro.onexit(function () {chrome.tabs.getSelected(null, function(tab) {chrome.tabs.reload(tab.id);});});
     window.setTimeout(function () {
 
         intro.addSteps([
             {
                 element: document.getElementById('search-container'),
-                intro: "Your searches have been imported. Drag and drop to reorder them!"
+                intro: "Your searches have been imported. Drag and drop the searches to reorder them!"
+            },
+            {
+                intro: "Next, let's adjust some settings."
             },
             {
                 element: document.getElementById('settings-open'),
-                intro: "Click here to open settings."
+                intro: "Click the settings button."
             }
         ]);
 
@@ -369,17 +381,23 @@ function intro3()
 function intro5()
 {
     let intro = introJs();
-    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false});
+    intro.setOptions({overlayOpacity: 0.2, showStepNumbers: false, showBullets: false, hideNext: true, hidePrev: true});
     intro.onexit(function () {chrome.tabs.getSelected(null, function(tab) {chrome.tabs.reload(tab.id);});});
     window.setTimeout(function () {
 
         intro.addSteps([
             {
+                intro: "Before you make your first search, let's go over a few final things."
+            },
+            {
+                intro: "If you need to access Search Queue at any time, click the black plus icon on the right corner of the toolbar."
+            },
+            {
                 element: document.getElementById('clear'),
-                intro: "To clear all searches, click this button. It's blocked right now!",
+                intro: "To clear all the queued searches, click the clear button. This is disabled for now!",
                 disableInteraction: true
-            }
-            ,{
+            },
+            {
                 element: document.getElementById('start'),
                 intro: "You're all set! Click the start button to make your first search."
             }
