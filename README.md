@@ -51,15 +51,15 @@ The extension popup page can be accessed by clicking the Search Queue icon on th
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/start.png" width="16"> Start
 
-The 'Start' button searches Google for the term in the search queue that the queue index points to.
+The 'Start' button searches for the term in the search queue that the queue index points to.
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/next.png" width="16"> Next
 
-The 'Next' button searches Google for the next term in the search queue. The 'Next' button can also be quickly activated with the keyboard shortcut 'Alt-Up Arrow'. 
+The 'Next' button searches for the next term in the search queue. The 'Next' button can also be quickly activated with the keyboard shortcut 'Alt-Up Arrow'. 
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/previous.png" width="16"> Previous
 
-The 'Previous' button searches Google for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Alt+Down Arrow'.
+The 'Previous' button searches for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Alt+Down Arrow'.
 
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/search.png" width="16"> View Queue
 
@@ -105,11 +105,11 @@ The '+ Add Search' button adds a new search to the queue.
 
 ## Use Cases
 
-In general, Search Queue is great for anyone who needs to make many Google searches. A few specific examples of how it might be used are as follows:
+In general, Search Queue is great for anyone who needs to make many web searches. A few specific examples of how it might be used are as follows:
 
 #### 1. Analysis
 
-If an analyst has a large number of Google searches that need to be made about a particular topic (e.g. business, product, software), Search Queue is helpful in making these searches in a quick, organized way.
+If an analyst has a large number of searches that need to be made about a particular topic (e.g. business, product, software), Search Queue is helpful in making these searches in a quick, organized way.
 
 #### 2. Research
 
@@ -117,7 +117,7 @@ If a researcher has a topic of interest with many different facets and would lik
 
 #### 3. Spreadsheet Work
 
-If a user is doing work which involves making Google searches from a spreadsheet, instead of switching between the spreadsheet and Google for each search, the user can simply copy and paste the list of searches into Search Queue.
+If a user is doing work which involves making searches from a spreadsheet, instead of switching between the spreadsheet and Chrome for each search, the user can simply copy and paste the list of searches into Search Queue.
 
 ## Future Goals
 
