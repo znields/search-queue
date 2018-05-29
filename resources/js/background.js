@@ -51,22 +51,6 @@ function search(term, newTab)
     });
 }
 
-// searches all the terms in the queue
-function searchAll()
-{
-    chrome.storage.local.get(null, function (items)
-    {
-        // iterates over each search term
-        let i = 1;
-        while (items['search' + i])
-        {
-            // makes the search in a new tab
-            search(items['search' + i], true);
-            i++;
-        }
-    });
-}
-
 // creates a Google search for the current search term
 function start()
 {
@@ -77,7 +61,7 @@ function start()
         if (items['search-count'] !== 0)
         {
             // search the term at the current index
-            search(items['search' + items['index']]);
+            search(items['search' + items['index']], true);
         }
         else
         {

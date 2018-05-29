@@ -335,7 +335,7 @@ function intro1()
                 disableInteraction: true
             },
             {
-                intro: "Next, let's import a list of searches."
+                intro: "Next, let's import a list of searches into the queue."
             },
             {
                 element: document.getElementById('import-open'),
@@ -360,7 +360,7 @@ function intro3()
         intro.addSteps([
             {
                 element: document.getElementById('search-container'),
-                intro: "Your searches have been imported. Drag and drop the searches to reorder them!"
+                intro: "Your searches have been added to the queue. Drag and drop the searches to reorder them!"
             },
             {
                 intro: "Next, let's adjust some settings."

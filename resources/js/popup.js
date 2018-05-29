@@ -91,6 +91,22 @@ function restore()
     });
 }
 
+// searches all the terms in the queue
+function searchAll()
+{
+    chrome.storage.local.get(null, function (items)
+    {
+        // iterates over each search term
+        let i = 1;
+        while (items['search' + i] !== undefined)
+        {
+            // makes the search in a new tab
+            search(items['search' + i], true);
+            i++;
+        }
+    });
+}
+
 // adds event listeners to buttons
 document.addEventListener('DOMContentLoaded', function ()
 {
