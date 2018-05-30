@@ -13,3 +13,7 @@
 .button-large:hover {
     background-color: #CACACA;
 }
+
+.button-large:focus {
+    outline: 0;
+}
