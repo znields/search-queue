@@ -6,7 +6,8 @@
 
   "description" : "A queue for searching the web!",
   "background": {
-    "scripts": ["resources/js/background.js"]
+    "scripts": ["resources/js/background.js"],
+    "persistent": false
   },
 
   "browser_action": {
@@ -37,6 +38,7 @@
     "storage",
     "notifications",
     "tabs",
-    "background"
+    "background",
+    "contextMenus"
   ]
 }

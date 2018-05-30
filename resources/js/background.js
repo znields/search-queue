@@ -135,12 +135,27 @@ function command(string)
     }
 }
 
+// adds a search term to storage directly
+function addBackground(term)
+{
+    // retrieves the number of searches in the queue
+    chrome.storage.local.get('search-count', function (items) {
+
+        // constructs search term number with related term
+        let packet = {};
+        packet['search' + (items['search-count'] + 1)] = term;
+        packet['search-count'] = items['search-count'] + 1;
+
+        // add the search term to storage
+        chrome.storage.local.set(packet);
+    });
+}
+
 // open the queue editor when the extension is installed
 chrome.runtime.onInstalled.addListener(function (details)
 {
     // if the user just installed the programm
-    if (details.reason === "install")
-    {
+    if (details.reason === "install") {
         // initialize the packet that will contain the initial settings
         let packet = {};
 
@@ -154,6 +169,14 @@ chrome.runtime.onInstalled.addListener(function (details)
 
         // save the packet to storage and then opens the
         chrome.storage.local.set(packet, openEditor);
+
+        // add the right click option to add to queue
+        chrome.contextMenus.create({id: '1', title: "Add '%s' to the Queue", contexts: ['selection']});
+    }
+    else if (details.reason === "update")
+    {
+        // add the right click option to add to queue
+        chrome.contextMenus.create({id: '1', title: "Add '%s' to the Queue", contexts: ['selection']});
     }
 });
 
@@ -161,3 +184,8 @@ chrome.runtime.onInstalled.addListener(function (details)
 chrome.commands.onCommand.addListener(function (command_) {
     command(command_);
 });
+
+// adds a listener for right click add to queue button
+chrome.contextMenus.onClicked.addListener(function (info) {addBackground(info['selectionText'])});
+
+

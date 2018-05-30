@@ -89,38 +89,12 @@ function clear()
     chrome.storage.local.set({'search-count': 0, 'index': 1});
 }
 
-// removes the term at the ith index from the search queue
-function remove(i)
-{
-    // retrieves all term divs from editor.html
-    const searchContainers = document.getElementsByClassName('container-search');
-
-    // removes the last search term from the list of terms
-    searchContainers[0].parentNode.removeChild(document.getElementById('container-search-' + i));
-
-    // retrieves the number of searches and the search term variable from storage
-    chrome.storage.local.get('search-count', function (items)
-    {
-        // saves the deletion to the search queue
-        chrome.storage.local.set({'search-count': items['search-count'] - 1});
-        chrome.storage.local.remove('search' + items['search-count']);
-    });
-
-    // adjusts the term numbers so that they are in order
-    adjustTermNumbers();
-
-    // saves the current terms to the database
-    save();
-
-}
-
 // adds a new search term
 function add(term, i)
 {
     // retrieves the number of searches from storage and passes it into function
     chrome.storage.local.get('search-count', function (items)
     {
-
         // defines a boolean as to whether a button pressed is causing the add
         const button_pressed = i === undefined;
 
@@ -173,6 +147,31 @@ function add(term, i)
         }
 
     });
+}
+
+// removes the term at the ith index from the search queue
+function remove(i)
+{
+    // retrieves all term divs from editor.html
+    const searchContainers = document.getElementsByClassName('container-search');
+
+    // removes the last search term from the list of terms
+    searchContainers[0].parentNode.removeChild(document.getElementById('container-search-' + i));
+
+    // retrieves the number of searches and the search term variable from storage
+    chrome.storage.local.get('search-count', function (items)
+    {
+        // saves the deletion to the search queue
+        chrome.storage.local.set({'search-count': items['search-count'] - 1});
+        chrome.storage.local.remove('search' + items['search-count']);
+    });
+
+    // adjusts the term numbers so that they are in order
+    adjustTermNumbers();
+
+    // saves the current terms to the database
+    save();
+
 }
 
 // adjusts the term numbers to be in order
