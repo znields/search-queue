@@ -61,11 +61,11 @@ The 'Next' button searches for the next term in the search queue. The 'Next' but
 
 The 'Previous' button searches for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Alt+Down Arrow'.
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/search.png" width="16"> View Queue
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/search.png" width="16"> Search All
 
 The 'Search All' button searches for every term in the queue in new tabs.
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/view.png" width="16"> Search All
+#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/view.png" width="16"> View Queue
 
 The 'View Queue' button presents a clickable list of all the search terms in the queue. Upon clicking a term, it is immediately searched.
 
@@ -96,8 +96,6 @@ The settings button opens up the settings portion of the Queue Editor. On this p
 #### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/delete.png" width="16"> Delete
 
 Once a search has been added, it can be deleted by hovering over the search number and clicking on the delete button.
-
-
 
 #### + Add Search
 
