@@ -338,7 +338,7 @@ function intro1()
             },
             {
                 element: document.getElementById('import-open'),
-                intro: "Click the import button."
+                intro: "Click the circular import button."
             }
         ]);
 
@@ -366,7 +366,7 @@ function intro3()
             },
             {
                 element: document.getElementById('settings-open'),
-                intro: "Click the settings button."
+                intro: "Click the circular settings button."
             }
         ]);
 
@@ -398,7 +398,7 @@ function intro5()
             },
             {
                 element: document.getElementById('start'),
-                intro: "You're all set! Click the start button to make your first search."
+                intro: "You're all set! Click the circular start button to make your first search."
             }
         ]);
 
