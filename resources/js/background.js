@@ -172,11 +172,13 @@ chrome.runtime.onInstalled.addListener(function (details)
 
         // add the right click option to add to queue
         chrome.contextMenus.create({id: '1', title: "Add '%s' to the Queue", contexts: ['selection']});
+        chrome.contextMenus.create({id: '2', title: "Add link to the Queue", contexts: ['link']});
     }
     else if (details.reason === "update")
     {
         // add the right click option to add to queue
         chrome.contextMenus.create({id: '1', title: "Add '%s' to the Queue", contexts: ['selection']});
+        chrome.contextMenus.create({id: '2', title: "Add link to the Queue", contexts: ['link']});
     }
 });
 
@@ -186,6 +188,10 @@ chrome.commands.onCommand.addListener(function (command_) {
 });
 
 // adds a listener for right click add to queue button
-chrome.contextMenus.onClicked.addListener(function (info) {addBackground(info['selectionText'])});
+chrome.contextMenus.onClicked.addListener(function (info) {
+
+    if (info['menuItemId'] === '1') addBackground(info['selectionText']);
+    else if (info['menuItemId'] === '2') addBackground(info['linkUrl']);
+});
 
 
