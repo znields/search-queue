@@ -13,6 +13,7 @@ A queue for searching the web!
 [Functionality](#functionality)<br />
 [Use Cases](#use-cases)<br />
 [Future Goals](#future-goals)<br />
+[Acknowledgements](#acknowledgements)<br />
 
 ## Purpose
 
@@ -120,3 +121,14 @@ If a user is doing work which involves making searches from a spreadsheet, inste
 ## Future Goals
 
 See [Projects](https://github.com/isaiahnields/SearchQueue/projects).
+
+## Acknowledgements
+
+A special thanks to the following people for their help in testing, designing, and generating ideas for Search Queue:
+
+Anisa Vashi
+Ben Takacs
+Scott Teagle
+Eric Hildebrandt
+Sarah Teagle
+William Nields
