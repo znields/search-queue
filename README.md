@@ -140,8 +140,8 @@ Scott helped perfect the flow and terminology of the introduction that the user 
 
 #### Eric Hildebrandt
 
-Eric recommended the removal of unnecessary buttons from the introduction and helped point out other design flaws in the program.
+Eric recommended the removal of unnecessary buttons from the introduction and helped point out other design flaws in the extension.
 
 #### William Nields
 
-William generated the idea to add the start button to the queue editor page.
+William generated the idea to add the start button to the queue editor page, a feature that greatly enhanced the usability of the extension.
