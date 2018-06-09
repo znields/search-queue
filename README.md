@@ -124,11 +124,24 @@ See [Projects](https://github.com/isaiahnields/SearchQueue/projects).
 
 ## Acknowledgements
 
-A special thanks to the following people for their help in testing, designing, and generating ideas for Search Queue:
+A special thanks to the following people for their help in testing, designing, and generating ideas for Search Queue.
 
 #### Anisa Vashi
+
+In addition to bug testing and making design recommendations, Anisa generated one of Search Queue's most useful features: the ability to search queued terms with different search engines.
+
 #### Ben Takacs
+
+Ben was instrumental in bug testing the second iteration of the user interface of Search Queue. He also recommended that an empty search term be displayed when the extension is installed, a feature that makes this extension easier to use and understand.
+
 #### Scott Teagle
+
+Scott helped perfect the flow and terminology of the introduction that the user is given upon the installation of Search Queue.
+
 #### Eric Hildebrandt
-#### Sarah Teagle
+
+Eric recommended the removal of uncessary buttons in the introduction and helped point out design flaws.
+
 #### William Nields
+
+William generated the idea to add the start button to the queue editor page.
