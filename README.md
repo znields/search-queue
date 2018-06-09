@@ -126,9 +126,9 @@ See [Projects](https://github.com/isaiahnields/SearchQueue/projects).
 
 A special thanks to the following people for their help in testing, designing, and generating ideas for Search Queue:
 
-Anisa Vashi<br/>
-Ben Takacs<br/>
-Scott Teagle<br/>
-Eric Hildebrandt<br/>
-Sarah Teagle<br/>
-William Nields<br/>
+#### Anisa Vashi
+#### Ben Takacs
+#### Scott Teagle
+#### Eric Hildebrandt
+#### Sarah Teagle
+#### William Nields
