@@ -140,7 +140,7 @@ Scott helped perfect the flow and terminology of the introduction that the user 
 
 #### Eric Hildebrandt
 
-Eric recommended the removal of uncessary buttons in the introduction and helped point out design flaws.
+Eric recommended the removal of uncessary buttons from the introduction and helped point out other design flaws in the program.
 
 #### William Nields
 
