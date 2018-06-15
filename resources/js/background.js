@@ -45,6 +45,9 @@ function search(term, newTab)
         // if the appended constant is not null, append it to the search
         if (items['append-constant']) search += '+' + items['append-constant'];
 
+        // encode all ampersands in the search
+        if (items['search-engine']) search = search.replace('&', '%26');
+
         // make the search
         if (newTab) chrome.tabs.create({"url": search});
         else chrome.tabs.update({"url": search});
@@ -55,13 +58,13 @@ function search(term, newTab)
 function start()
 {
     // retrieves all items from storage
-    chrome.storage.local.get(null, function (items) {
+    chrome.storage.local.get(['search-count','search1'], function (items) {
 
         // if the number of search terms is not zero
         if (items['search-count'] !== 0)
         {
             // search the term at the current index
-            search(items['search' + items['index']], true);
+            search(items['search1'], true);
         }
         else
         {
