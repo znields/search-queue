@@ -7,12 +7,13 @@ A queue for searching the web!
 
 ## Table of Contents
 
-[Purpose](#purpose)<br />
-[Compatibility](#compatibility)<br />
-[Setup](#setup)<br />
-[Functionality](#functionality)<br />
-[Use Cases](#use-cases)<br />
-[Future Goals](#future-goals)<br />
+[Purpose](#purpose)<br/>
+[Compatibility](#compatibility)<br/>
+[Setup](#setup)<br/>
+[Functionality](#functionality)<br/>
+[Use Cases](#use-cases)<br/>
+[Future Goals](#future-goals)<br/>
+[Acknowledgements](#acknowledgements)<br/>
 
 ## Purpose
 
@@ -120,3 +121,27 @@ If a user is doing work which involves making searches from a spreadsheet, inste
 ## Future Goals
 
 See [Projects](https://github.com/isaiahnields/SearchQueue/projects).
+
+## Acknowledgements
+
+A special thanks to the following people for their help in testing, designing, and generating ideas for Search Queue.
+
+#### Anisa Vashi
+
+In addition to bug testing and making design recommendations, Anisa generated one of Search Queue's most useful features: the ability to search queued terms with different search engines.
+
+#### Ben Takacs
+
+Ben was instrumental in bug testing the second iteration of the user interface of Search Queue. He also recommended that an empty search term be displayed when the extension is installed, a feature that makes this extension easier to use and understand.
+
+#### Scott Teagle
+
+Scott helped perfect the flow and terminology of the introduction that the user is given upon the installation of Search Queue.
+
+#### Eric Hildebrandt
+
+Eric recommended the removal of unnecessary buttons from the introduction and helped point out other design flaws in the extension.
+
+#### William Nields
+
+William generated the idea to add the start button to the queue editor page, a feature that greatly enhanced the usability of the extension.
