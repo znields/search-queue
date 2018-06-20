@@ -8,6 +8,7 @@ body {
     font-size: 14px;
     user-select: none;
     height: 16px;
+    text-overflow: ellipsis;
 }
 
 .button:hover {
