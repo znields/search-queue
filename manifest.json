@@ -4,6 +4,7 @@
   "version" : "2.16",
   "icons": {"128": "resources/images/icon_128.png"},
 
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "description" : "A queue for searching the web!",
   "background": {
     "scripts": ["resources/js/background.js"],
