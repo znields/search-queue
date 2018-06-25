@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Search Queue",
-  "version" : "2.17",
+  "version" : "2.18",
   "icons": {"128": "resources/images/icon_128.png"},
 
   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",

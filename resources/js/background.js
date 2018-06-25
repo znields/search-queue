@@ -128,6 +128,7 @@ function command(string)
     {
         // search the next search term
         next();
+        _gaq.push(['_trackEvent', 'background -- next', 'clicked']);
     }
 
     // if the keyboard shortcut indicates previous
@@ -135,6 +136,7 @@ function command(string)
     {
         // search the previous search term
         previous();
+        _gaq.push(['_trackEvent', 'background -- previous', 'clicked']);
     }
 }
 
