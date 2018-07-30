@@ -1,9 +1,9 @@
-# <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png" width="24"> Search Queue
+# <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/icon.png" width="24"> Search Queue
 > A queue for searching the web!
 
 [![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
 ![Build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
-[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/isaiahnields/SearchQueue/blob/master/LICENSE)
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/isaiahnields/search-queue/blob/master/LICENSE)
 
 ## Table of Contents
 
@@ -50,31 +50,31 @@ Search Queue has a few different features, all of which are explained in detail 
 
 The extension popup page can be accessed by clicking the Search Queue icon on the right of the toolbar. On this page, there are a few tasks that can be completed:
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/start.png" width="16"> Start
+#### <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/start.png" width="16"> Start
 
 The 'Start' button searches for the term in the search queue that the queue index points to.
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/next.png" width="16"> Next
+#### <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/next.png" width="16"> Next
 
 The 'Next' button searches for the next term in the search queue. The 'Next' button can also be quickly activated with the keyboard shortcut 'Alt-Up Arrow'. 
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/previous.png" width="16"> Previous
+#### <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/previous.png" width="16"> Previous
 
 The 'Previous' button searches for the previous term in the search queue. The 'Previous' button can also be quickly activated with the keyboard shortcut 'Alt+Down Arrow'.
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/search.png" width="16"> Search All
+#### <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/search.png" width="16"> Search All
 
 The 'Search All' button searches for every term in the queue in new tabs.
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/view.png" width="16"> View Queue
+#### <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/view.png" width="16"> View Queue
 
 The 'View Queue' button presents a clickable list of all the search terms in the queue. Upon clicking a term, it is immediately searched.
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/edit.png" width="16"> Edit Queue
+#### <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/edit.png" width="16"> Edit Queue
 
 The 'Edit Queue' button navigates to the queue editor page.
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/help.png" width="16"> Help
+#### <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/help.png" width="16"> Help
 
 The 'Help' button navigates to the Search Queue repository.
 
@@ -82,19 +82,19 @@ The 'Help' button navigates to the Search Queue repository.
 
 The queue editor automatically opens after Queue Search has been installed. It can also be accessed by first clicking on the Queue Search icon in the toolbar and then on 'Edit Queue'. The queue editor's primary purpose is to allow for the addition or removal of searches from the queue. The following is a functional description of each of the input fields and buttons on the editor page:
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/import.png" width="16"> Import
+#### <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/import.png" width="16"> Import
 
 The import button is used to display a popup which allows for searches to be quickly imported. The searches should be entered into the text box separated by new lines.
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/clear.png" width="16"> Clear
+#### <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/clear.png" width="16"> Clear
 
 The clear button is used to clear all entered searches and the appended and prepended phrases.
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/settings.png" width="16"> Settings
+#### <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/settings.png" width="16"> Settings
 
 The settings button opens up the settings portion of the Queue Editor. On this page, constant phrases can be added and a search engine can be selected.
 
-#### <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/delete.png" width="16"> Delete
+#### <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/delete.png" width="16"> Delete
 
 Once a search has been added, it can be deleted by hovering over the search number and clicking on the delete button.
 
@@ -120,7 +120,7 @@ If a user is doing work which involves making searches from a spreadsheet, inste
 
 ## Future Goals
 
-See [Projects](https://github.com/isaiahnields/SearchQueue/projects).
+See [Projects](https://github.com/isaiahnields/search-queue/projects).
 
 ## Acknowledgements
 
