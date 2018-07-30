@@ -1,5 +1,5 @@
 # <img src="https://raw.githubusercontent.com/isaiahnields/SearchQueue/master/resources/images/icon.png" width="24"> Search Queue
-A queue for searching the web!
+> A queue for searching the web!
 
 [![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
 ![Build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
