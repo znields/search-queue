@@ -2,6 +2,7 @@
 > A queue for searching the web!
 
 [![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
+[](https://img.shields.io/chrome-web-store/users/nimelepbpejjlbmoobocpfnjhihnpked.svg)
 ![Build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/isaiahnields/search-queue/blob/master/LICENSE)
 
