@@ -1,9 +1,8 @@
 # <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/icon.png" width="24"> Search Queue
 > A queue for searching the web!
 
-[![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
-[![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
-![Build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
+[![Version](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
+[![Users](https://img.shields.io/chrome-web-store/users/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/isaiahnields/search-queue/blob/master/LICENSE)
 
 ## Table of Contents
