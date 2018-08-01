@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b36de375-3cbe-43ae-b700-2dcbd283cc10" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="editor.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/editor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+              <folding>
+                <element signature="e#1791#1797#0" expanded="true" />
+                <element signature="e#1797#1803#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/css/editor.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/js/editor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/background.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1256">
+              <caret line="138" column="57" selection-start-line="138" selection-start-column="57" selection-end-line="138" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/popup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1225">
+              <caret line="121" column="3" selection-start-line="121" selection-start-column="3" selection-end-line="121" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/settings.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tracker.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/tracker.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>width</find>
+      <find>remove</find>
+      <find>remove(</find>
+      <find>- 1</find>
+      <find>container</find>
+      <find>append</find>
+      <find>index</find>
+      <find>addDnd</find>
+      <find>preventDefa</find>
+      <find>addDraghandl</find>
+      <find>getAt</find>
+      <find>searchCount</find>
+      <find>search-term</find>
+      <find>0px</find>
+      <find>timeOut</find>
+      <find>timeout</find>
+      <find>display</find>
+      <find>main-con</find>
+      <find>restore</find>
+      <find>align</find>
+      <find>search-container</find>
+      <find>class</find>
+      <find>console.</find>
+      <find>add-term</find>
+      <find>color</find>
+      <find>openEditor</find>
+      <find>button</find>
+      <find>id</find>
+      <find>add</find>
+      <find>console.log</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>search-count</replace>
+      <replace />
+      <replace>0</replace>
+      <replace>container-search</replace>
+      <replace>button-delete</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/resources/js/temp.js" />
+        <option value="$PROJECT_DIR$/resources/js/queue.js" />
+        <option value="$PROJECT_DIR$/resources/css/queue.css" />
+        <option value="$PROJECT_DIR$/queue.html" />
+        <option value="$PROJECT_DIR$/resources/css/command-buttons.css" />
+        <option value="$PROJECT_DIR$/resources/css/circle-button.css" />
+        <option value="$PROJECT_DIR$/resources/css/command-button.css" />
+        <option value="$PROJECT_DIR$/resources/css/drag.css" />
+        <option value="$PROJECT_DIR$/resources/css/delete-button.css" />
+        <option value="$PROJECT_DIR$/resources/css/rectangle-button.css" />
+        <option value="$PROJECT_DIR$/resources/css/large-button.css" />
+        <option value="$PROJECT_DIR$/resources/css/import.css" />
+        <option value="$PROJECT_DIR$/resources/css/settings.css" />
+        <option value="$PROJECT_DIR$/resources/css/header.css" />
+        <option value="$PROJECT_DIR$/resources/css/main-container.css" />
+        <option value="$PROJECT_DIR$/resources/css/text-input.css" />
+        <option value="$PROJECT_DIR$/resources/css/container-term.css" />
+        <option value="$PROJECT_DIR$/resources/css/header-small.css" />
+        <option value="$PROJECT_DIR$/resources/css/header-large.css" />
+        <option value="$PROJECT_DIR$/resources/css/button-constant.css" />
+        <option value="$PROJECT_DIR$/resources/css/base.css" />
+        <option value="$PROJECT_DIR$/resources/css/span-constant.css" />
+        <option value="$PROJECT_DIR$/resources/css/constant-container.css" />
+        <option value="$PROJECT_DIR$/resources/css/container-constant.css" />
+        <option value="$PROJECT_DIR$/resources/css/introjs.css" />
+        <option value="$PROJECT_DIR$/resources/css/button-delete.css" />
+        <option value="$PROJECT_DIR$/resources/css/material-components-web.min.css" />
+        <option value="$PROJECT_DIR$/resources/css/button-small.css" />
+        <option value="$PROJECT_DIR$/resources/css/selector.css" />
+        <option value="$PROJECT_DIR$/resources/css/button-large.css" />
+        <option value="$PROJECT_DIR$/resources/css/input-text.css" />
+        <option value="$PROJECT_DIR$/resources/css/container-main.css" />
+        <option value="$PROJECT_DIR$/resources/css/container-center.css" />
+        <option value="$PROJECT_DIR$/resources/css/popup.css" />
+        <option value="$PROJECT_DIR$/resources/js/ga.js" />
+        <option value="$PROJECT_DIR$/resources/js/settings.js" />
+        <option value="$PROJECT_DIR$/resources/js/popup.js" />
+        <option value="$PROJECT_DIR$/resources/js/import.js" />
+        <option value="$PROJECT_DIR$/import.html" />
+        <option value="$PROJECT_DIR$/popup.html" />
+        <option value="$PROJECT_DIR$/resources/css/button-circle.css" />
+        <option value="$PROJECT_DIR$/resources/js/background.js" />
+        <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/settings.html" />
+        <option value="$PROJECT_DIR$/resources/css/container-search.css" />
+        <option value="$PROJECT_DIR$/editor.html" />
+        <option value="$PROJECT_DIR$/resources/js/tracker.js" />
+        <option value="$PROJECT_DIR$/resources/css/editor.css" />
+        <option value="$PROJECT_DIR$/resources/js/editor.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="282" />
+    <option name="y" value="292" />
+    <option name="width" value="1895" />
+    <option name="height" value="960" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <sortByType ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SearchQueue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SearchQueue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SearchQueue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SearchQueue" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SearchQueue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SearchQueue" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SearchQueue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SearchQueue" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/inields/Documents/GitHub/SearchQueue/queue.html" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js" />
+      <recent name="$PROJECT_DIR$/resources/css" />
+      <recent name="$PROJECT_DIR$/resources/images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR,Show Imports" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b36de375-3cbe-43ae-b700-2dcbd283cc10" name="Default" comment="" />
+      <created>1525444847923</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1525444847923</updated>
+      <workItem from="1525444849598" duration="191000" />
+      <workItem from="1525445066891" duration="271000" />
+      <workItem from="1525454619225" duration="27000" />
+      <workItem from="1526073211391" duration="619000" />
+      <workItem from="1526423056403" duration="2907000" />
+      <workItem from="1526426531408" duration="251000" />
+      <workItem from="1526433818254" duration="5181000" />
+      <workItem from="1526442733556" duration="1197000" />
+      <workItem from="1526478665956" duration="3194000" />
+      <workItem from="1526482505232" duration="10270000" />
+      <workItem from="1526503970525" duration="5305000" />
+      <workItem from="1526520722842" duration="1897000" />
+      <workItem from="1526575078501" duration="4173000" />
+      <workItem from="1526691969716" duration="3821000" />
+      <workItem from="1526827087740" duration="4466000" />
+      <workItem from="1526927777669" duration="26000" />
+      <workItem from="1526930968025" duration="5273000" />
+      <workItem from="1526937052084" duration="5297000" />
+      <workItem from="1526996958413" duration="3580000" />
+      <workItem from="1527015790888" duration="14597000" />
+      <workItem from="1527034132839" duration="5857000" />
+      <workItem from="1527095676148" duration="2848000" />
+      <workItem from="1527107540764" duration="8282000" />
+      <workItem from="1527122918929" duration="13595000" />
+      <workItem from="1527252724390" duration="23000" />
+      <workItem from="1527252766073" duration="2024000" />
+      <workItem from="1527258242592" duration="2000" />
+      <workItem from="1527451080148" duration="1008000" />
+      <workItem from="1527452486740" duration="8000" />
+      <workItem from="1527569713529" duration="175000" />
+      <workItem from="1527598523489" duration="819000" />
+      <workItem from="1527647301361" duration="4017000" />
+      <workItem from="1527708627240" duration="779000" />
+      <workItem from="1527709462044" duration="1615000" />
+      <workItem from="1527766617403" duration="246000" />
+      <workItem from="1527947833506" duration="347000" />
+      <workItem from="1527958949663" duration="31000" />
+      <workItem from="1528417698379" duration="2177000" />
+      <workItem from="1529068698015" duration="2450000" />
+      <workItem from="1529457543452" duration="313000" />
+      <workItem from="1529930931009" duration="5792000" />
+      <workItem from="1530199713011" duration="6138000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="131089000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="282" y="292" width="1895" height="960" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990138" visible="true" weight="0.24919957" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298351" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002946" side_tool="true" weight="0.1919414" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info id="Structure" order="1" sideWeight="0.5009862" side_tool="true" weight="0.31556502" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3299578" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49970537" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32792583" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="9" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/resources/css/editor.css" />
+    <entry file="file://$PROJECT_DIR$/resources/js/editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2505">
+          <caret line="167" column="38" selection-start-line="167" selection-start-column="38" selection-end-line="167" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/editor.css" />
+    <entry file="file://$PROJECT_DIR$/resources/css/popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1845">
+          <caret line="123" column="34" selection-start-line="123" selection-start-column="34" selection-end-line="123" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/editor.css" />
+    <entry file="file://$PROJECT_DIR$/resources/css/popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/editor.css" />
+    <entry file="file://$PROJECT_DIR$/resources/css/popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/import.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/temp.js" />
+    <entry file="file://$PROJECT_DIR$/resources/images/delete.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/command-buttons.css" />
+    <entry file="file://$PROJECT_DIR$/resources/css/import.css" />
+    <entry file="file://$PROJECT_DIR$/resources/css/settings.css" />
+    <entry file="file://$PROJECT_DIR$/resources/css/header-small.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/drag.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/header-large.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/button-constant.css" />
+    <entry file="file://$PROJECT_DIR$/resources/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/container-constant.css" />
+    <entry file="file://$PROJECT_DIR$/resources/css/introjs.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1060">
+          <caret line="507" column="11" selection-start-line="507" selection-start-column="11" selection-end-line="507" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram//Users/inields/Documents/GitHub/SearchQueue/resources/js/material-components-web.min.js">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/resources/js/material-components-web.min.js</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="426.0" y="306.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/material-components-web.min.js" />
+    <entry file="file://$PROJECT_DIR$/resources/css/material-components-web.min.css" />
+    <entry file="file://$PROJECT_DIR$/resources/css/container-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/container-center.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/button-small.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/selector.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/button-large.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/input-text.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/intro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18145">
+          <caret line="206" column="8" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="15730" column="12" selection-start-line="15730" selection-start-column="12" selection-end-line="15730" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/import.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/button-delete.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/button-circle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/import.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/container-search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-start-column="2" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/material.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="7" column="4094" lean-forward="true" selection-start-line="7" selection-start-column="4094" selection-end-line="7" selection-end-column="4094" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1256">
+          <caret line="138" column="57" selection-start-line="138" selection-start-column="57" selection-end-line="138" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1225">
+          <caret line="121" column="3" selection-start-line="121" selection-start-column="3" selection-end-line="121" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/tracker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/editor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+          <folding>
+            <element signature="e#1791#1797#0" expanded="true" />
+            <element signature="e#1797#1803#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
