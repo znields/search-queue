@@ -1,9 +1,0 @@
-.input-text {
-    padding: 5px 5px;
-    width: 220px;
-}
-
-.input-text:focus {
-    outline: 1px solid deepskyblue;
-    width: 220px;
-}
