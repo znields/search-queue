@@ -9,11 +9,7 @@
     "default_popup": "index.html",
     "default_title": "Search Queue"
   },
-  "icons": {
-    "16": "logo-small.png",
-    "48": "logo-small.png",
-    "128": "logo-small.png"
-  },
+  "icons": {},
   "permissions": [
   ]
 }
