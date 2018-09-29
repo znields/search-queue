@@ -1,8 +1,0 @@
-.selector {
-    border: 1px solid gray;
-    background: #F4F4F4;
-}
-
-.selector:focus {
-    outline: 0;
-}
