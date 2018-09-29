@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -2486,13 +2487,19 @@ In the future, we might start automatically compiling incompatible third-party m
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
 =======
+=======
+>>>>>>> parent of bad88a7... Removed All FIles
 # <img src="https://raw.githubusercontent.com/isaiahnields/search-queue/master/resources/images/icon.png" width="24"> Search Queue
 > A queue for searching the web!
 
 [![Version](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
 [![Users](https://img.shields.io/chrome-web-store/users/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
 [![Rating](https://img.shields.io/chrome-web-store/rating/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
+<<<<<<< HEAD
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/isaiahnields/search-queue/blob/master/LICENSE)
+=======
+[![License](https://img.shields.io/github/license/isaiahnields/search-queue.svg)](https://github.com/isaiahnields/search-queue/blob/master/LICENSE)
+>>>>>>> parent of bad88a7... Removed All FIles
 
 ## Table of Contents
 
@@ -2634,4 +2641,7 @@ Eric recommended the removal of unnecessary buttons from the introduction and he
 #### William Nields
 
 William generated the idea to add the start button to the queue editor page, a feature that greatly enhanced the usability of the extension.
+<<<<<<< HEAD
+>>>>>>> parent of bad88a7... Removed All FIles
+=======
 >>>>>>> parent of bad88a7... Removed All FIles

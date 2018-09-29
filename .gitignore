@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
@@ -20,6 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+=======
+.idea/
+>>>>>>> parent of bad88a7... Removed All FIles
 =======
 .idea/
 >>>>>>> parent of bad88a7... Removed All FIles
