@@ -2492,7 +2492,7 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 [![Version](https://img.shields.io/chrome-web-store/v/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
 [![Users](https://img.shields.io/chrome-web-store/users/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
 [![Rating](https://img.shields.io/chrome-web-store/rating/ipcifbklbbpchinpdfcfbhpghnknioff.svg)](https://goo.gl/e464Sz)
-[![License](https://img.shields.io/github/license/isaiahnields/search-queue.svg)](https://github.com/isaiahnields/search-queue/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/isaiahnields/search-queue/blob/master/LICENSE)
 
 ## Table of Contents
 
