@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="resources/images/icon.png">
+
+    <link rel="stylesheet" href="resources/css/base.css">
+    <link rel="stylesheet" href="resources/css/header-large.css">
+    <link rel="stylesheet" href="resources/css/header-small.css">
+    <link rel="stylesheet" href="resources/css/container-center.css">
+    <link rel="stylesheet" href="resources/css/container-search.css">
+    <link rel="stylesheet" href="resources/css/container-main.css">
+    <link rel="stylesheet" href="resources/css/container-inline.css">
+    <link rel="stylesheet" href="resources/css/input-text.css">
+    <link rel="stylesheet" href="resources/css/button-small.css">
+    <link rel="stylesheet" href="resources/css/selector.css">
+    <link rel="stylesheet" href="resources/css/introjs.css">
+
+    <script src="resources/js/settings.js"></script>
+    <script src="resources/js/intro.js"></script>
+    <script src="resources/js/tracker.js"></script>
+
+    <title>Settings - Search Queue</title>
+
+</head>
+
+<body>
+
+    <h1 class="header-large">
+
+        <img src="resources/images/icon.png" width="24">&nbsp;Settings - Search Queue
+
+    </h1>
+
+    <div id="settings-container" class="container-center">
+
+        <div id="constant-container" class="container-main">
+
+            <div class="header-small">Constant Phrases</div>
+
+            <div id="prepend-container" class="container-search" style="text-align: left">
+
+                <span class="container-inline">Prepend</span>
+                <input id="prepend-constant" class="input-text" type="text">
+
+            </div>
+
+            <div id="append-container" class="container-search" style="text-align: left">
+
+                <span class="container-inline">Append</span>
+                <input id="append-constant" class="input-text" type="text">
+
+            </div>
+
+        </div>
+
+        <div class="container-main">
+
+            <div class="header-small">Search Engine</div>
+
+            <div id="search-engine-container" class="container-search">
+
+                <select id="search-engine-selector" class="selector">
+
+                    <option value="">URL Search</option>
+                    <option value="https://www.bing.com/search?q=">Bing</option>
+                    <option value="https://www.google.com/search?q=">Google</option>
+                    <option value="https://scholar.google.com/scholar?q=">Google Scholar</option>
+                    <option value="https://en.wikipedia.org/w/index.php?search=">Wikipedia</option>
+                    <option value="http://www.wolframalpha.com/input/?i=">Wolfram Alpha</option>
+                    <option value="https://search.yahoo.com/search?p=">Yahoo</option>
+                    <option value="https://www.youtube.com/results?search_query=">YouTube</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div id="keyboard-shortcuts-container" class="container-main">
+
+            <div class="header-small">Keyboard Shortcuts</div>
+
+            <div id="next-keyboard-shortcut-container" class="container-search" style="text-align: left">
+
+                <span class="container-inline">Next</span>
+                <span id="next-keyboard-shortcut" class="container-inline container-inline--border"></span>
+
+            </div>
+
+            <div id="previous-keyboard-shortcut-container" class="container-search" style="text-align: left">
+
+                <span class="container-inline">Previous</span>
+                <span id="previous-keyboard-shortcut" class="container-inline container-inline--border"></span>
+
+            </div>
+
+            <div id="edit-keyboard-shortcut-container" class="container-search">
+
+                <button id="edit-keyboard-shortcuts" class="button-small button-tracked">Edit</button>
+
+            </div>
+
+
+
+        </div>
+
+        <div id="intro-container" class="container-main">
+
+            <div class="header-small">Introduction</div>
+
+            <div id="restart-introduction-container" class="container-search">
+
+                <button id="restart-introduction" class="button-small button-tracked">Restart</button>
+
+            </div>
+
+        </div>
+
+        <button class="button-small button-tracked" id="cancel">Cancel</button>
+        <button class="button-small button-tracked" id="save">Save</button>
+
+    </div>
+
+</body>
+</html>

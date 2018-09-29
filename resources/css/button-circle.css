@@ -1,0 +1,24 @@
+.button-circle {
+    margin: 0 5px;
+    padding: 0 0;
+    height: 35px;
+    width: 35px;
+    border: 1px solid gray;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.button-circle:hover {
+    background: #F4F4F4;
+}
+
+.button-circle:focus {
+    outline: 0;
+}
+
+.button-circle-image {
+    width: 25px;
+    display: block;
+    margin: auto;
+    pointer-events: none;
+}
