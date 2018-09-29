@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Search Queue",
+  "description": "A queue for searching the web!",
+  "version": "2.0.0",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Search Queue"
+  },
+  "icons": {
+    "16": "logo-small.png",
+    "48": "logo-small.png",
+    "128": "logo-small.png"
+  },
+  "permissions": [
+  ]
+}
